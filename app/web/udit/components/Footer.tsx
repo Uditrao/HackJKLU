@@ -65,7 +65,7 @@ export default function Footer() {
 
                 {/* Bottom bar */}
                 <div className="pt-8 border-t border-[#e8e0d0] flex flex-col sm:flex-row items-center justify-between gap-4">
-                    <p className="text-xs text-[#6b6b7b]">
+                    <p className="text-xs text-[#6b6b7b]" suppressHydrationWarning>
                         © {new Date().getFullYear()} Boli. All rights reserved.
                     </p>
                     <p className="text-xs text-[#6b6b7b]">

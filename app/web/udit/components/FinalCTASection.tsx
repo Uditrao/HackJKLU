@@ -46,10 +46,10 @@ export default function FinalCTASection() {
                         Get started — it&apos;s free
                     </Link>
                     <Link
-                        href="/contact"
+                        href="/try-flashcards"
                         className="text-white font-medium px-8 py-4 rounded-full border border-white/20 hover:border-white/50 hover:bg-white/5 transition-all duration-200"
                     >
-                        Contact us
+                        Try it out
                     </Link>
                 </div>
             </div>

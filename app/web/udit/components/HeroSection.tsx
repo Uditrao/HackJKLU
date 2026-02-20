@@ -91,10 +91,10 @@ export default function HeroSection() {
                             </svg>
                         </Link>
                         <Link
-                            href="#how-it-works"
+                            href="/web/udit/try-flashcards"
                             className="inline-flex items-center gap-2 text-[#1a1a2e] font-medium px-7 py-3.5 rounded-full border border-[#e8e0d0] hover:border-[#1a1a2e] hover:bg-[#f5f0e8] transition-all duration-200"
                         >
-                            See how it works
+                            Try a flashcard
                         </Link>
                     </div>
                 </div>

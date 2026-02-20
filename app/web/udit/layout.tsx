@@ -1,4 +1,12 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Boli — Learn Indian Languages the Way They Are Spoken",
@@ -14,10 +22,14 @@ export const metadata: Metadata = {
   },
 };
 
-export default function UditLayout({
+export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return <>{children}</>;
+  return (
+    <div className={`${inter.variable} antialiased`}>
+      {children}
+    </div>
+  );
 }
