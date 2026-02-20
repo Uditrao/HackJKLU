@@ -1,0 +1,176 @@
+[
+  {
+    "id": "conv_1771597549028",
+    "timestamp": "2026-02-20T14:25:49.029Z",
+    "scene_id": "scene_1",
+    "user_input": "मुझे दूध चाहिए",
+    "tasks": [
+      {
+        "task_id": "ask_milk",
+        "expected_intent": "ask for milk",
+        "keywords": [
+          "दूध"
+        ]
+      }
+    ],
+    "evaluation": {
+      "scene_id": "scene_1",
+      "input_text": "मुझे दूध चाहिए",
+      "tasks": [
+        {
+          "task_id": "ask_milk",
+          "score": 100,
+          "completed": true,
+          "feedback": "Perfect! You clearly asked for milk using the correct keyword."
+        }
+      ],
+      "xp_gained": 20,
+      "words_to_add": []
+    },
+    "xp_gained": 20,
+    "memory_after": {
+      "xp": 20,
+      "level": 1
+    }
+  },
+  {
+    "id": "conv_1771601470293",
+    "timestamp": "2026-02-20T15:31:10.293Z",
+    "scene_id": "scene_1",
+    "user_input": "मुझे गरम कॉफी का मग चाहिए",
+    "tasks": [
+      {
+        "task_id": "order_coffee",
+        "expected_intent": "order a hot coffee mug",
+        "keywords": [
+          "गरम",
+          "कॉफी",
+          "मग"
+        ]
+      }
+    ],
+    "evaluation": {
+      "scene_id": "scene_1",
+      "input_text": "मुझे गरम कॉफी का मग चाहिए",
+      "tasks": [
+        {
+          "task_id": "order_coffee",
+          "score": 100,
+          "completed": true,
+          "feedback": "Perfect! You clearly expressed the desire for a hot coffee mug using all the expected keywords."
+        }
+      ],
+      "xp_gained": 20,
+      "words_to_add": []
+    },
+    "xp_gained": 20,
+    "memory_after": {
+      "xp": 40,
+      "level": 1
+    }
+  },
+  {
+    "id": "conv_1771601700930",
+    "timestamp": "2026-02-20T15:35:00.930Z",
+    "scene_id": "scene_1",
+    "user_input": "मुझे गरम कॉफी का मग चाहिए",
+    "tasks": [
+      {
+        "task_id": "order_coffee",
+        "expected_intent": "order a hot coffee mug",
+        "keywords": [
+          "गरम",
+          "कॉफी",
+          "मग"
+        ]
+      }
+    ],
+    "evaluation": {
+      "scene_id": "scene_1",
+      "input_text": "मुझे गरम कॉफी का मग चाहिए",
+      "tasks": [
+        {
+          "task_id": "order_coffee",
+          "score": 100,
+          "completed": true,
+          "feedback": "Perfect! You clearly expressed the desire for a hot coffee mug using all the expected keywords naturally."
+        }
+      ],
+      "xp_gained": 20,
+      "words_to_add": [
+        {
+          "word": "गरम",
+          "meaning": "hot",
+          "context_sentence": "मुझे गरम कॉफी का मग चाहिए"
+        },
+        {
+          "word": "मग",
+          "meaning": "mug",
+          "context_sentence": "मुझे गरम कॉफी का मग चाहिए"
+        },
+        {
+          "word": "चाहिए",
+          "meaning": "want / need",
+          "context_sentence": "मुझे गरम कॉफी का मग चाहिए"
+        }
+      ]
+    },
+    "xp_gained": 20,
+    "memory_after": {
+      "xp": 60,
+      "level": 1
+    }
+  },
+  {
+    "id": "conv_1771603072730",
+    "timestamp": "2026-02-20T15:57:52.730Z",
+    "scene_id": "scene_1",
+    "user_input": "मुझे गरम कॉफी का मग चाहिए",
+    "tasks": [
+      {
+        "task_id": "order_coffee",
+        "expected_intent": "order a hot coffee mug",
+        "keywords": [
+          "गरम",
+          "कॉफी",
+          "मग"
+        ]
+      }
+    ],
+    "evaluation": {
+      "scene_id": "scene_1",
+      "input_text": "मुझे गरम कॉफी का मग चाहिए",
+      "tasks": [
+        {
+          "task_id": "order_coffee",
+          "score": 100,
+          "completed": true,
+          "feedback": "Perfectly expressed the intent to order a hot coffee mug using all expected keywords naturally."
+        }
+      ],
+      "xp_gained": 20,
+      "words_to_add": [
+        {
+          "word": "गरम",
+          "meaning": "hot",
+          "context_sentence": "मुझे गरम कॉफी का मग चाहिए"
+        },
+        {
+          "word": "कॉफी",
+          "meaning": "coffee",
+          "context_sentence": "मुझे गरम कॉफी का मग चाहिए"
+        },
+        {
+          "word": "मग",
+          "meaning": "mug",
+          "context_sentence": "मुझे गरम कॉफी का मग चाहिए"
+        }
+      ]
+    },
+    "xp_gained": 20,
+    "memory_after": {
+      "xp": 80,
+      "level": 1
+    }
+  }
+]

@@ -1,0 +1,83 @@
+{
+  "all": [
+    {
+      "word": "गर्म",
+      "meaning": "hot"
+    },
+    {
+      "word": "मग",
+      "meaning": "mug"
+    },
+    {
+      "word": "कॉफ़ी",
+      "meaning": "coffee"
+    },
+    {
+      "word": "गरम",
+      "meaning": "hot"
+    },
+    {
+      "word": "कॉफी",
+      "meaning": "coffee"
+    },
+    {
+      "word": "ਗਰਮ",
+      "meaning": "hot"
+    },
+    {
+      "word": "ਮੱਗ",
+      "meaning": "mug"
+    },
+    {
+      "word": "ਕਾਫੀ",
+      "meaning": "coffee"
+    }
+  ],
+  "user_used": [
+    {
+      "word": "गरम",
+      "meaning": "hot",
+      "context": "मुझे गरम कॉफी का मग चाहिए",
+      "strength": 0.5
+    },
+    {
+      "word": "कॉफी",
+      "meaning": "coffee",
+      "context": "मुझे गरम कॉफी का मग चाहिए",
+      "strength": 0.5
+    },
+    {
+      "word": "मग",
+      "meaning": "mug",
+      "context": "मुझे गरम कॉफी का मग चाहिए",
+      "strength": 0.5
+    }
+  ],
+  "scene_used": [
+    {
+      "word": "गर्म",
+      "meaning": "hot",
+      "strength": 0
+    },
+    {
+      "word": "कॉफ़ी",
+      "meaning": "coffee",
+      "strength": 0
+    },
+    {
+      "word": "ਗਰਮ",
+      "meaning": "hot",
+      "strength": 0
+    },
+    {
+      "word": "ਮੱਗ",
+      "meaning": "mug",
+      "strength": 0
+    },
+    {
+      "word": "ਕਾਫੀ",
+      "meaning": "coffee",
+      "strength": 0
+    }
+  ]
+}
