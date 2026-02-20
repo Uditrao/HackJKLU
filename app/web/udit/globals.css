@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: #faf8f3;
+  --color-surface: #f5f0e8;
+  --color-charcoal: #1a1a2e;
+  --color-charcoal-light: #2d2d44;
+  --color-turmeric: #d4972a;
+  --color-turmeric-light: #e8b84b;
+  --color-turmeric-pale: #fdf3dc;
+  --color-muted: #6b6b7b;
+  --color-border: #e8e0d0;
+  --font-sans: var(--font-inter);
+}
+
+:root {
+  --background: #faf8f3;
+  --foreground: #1a1a2e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-inter, "Inter", sans-serif);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Native script styling */
+.script-display {
+  font-family: "Noto Sans Devanagari", "Noto Sans Tamil", "Noto Sans Telugu",
+    "Noto Sans Kannada", sans-serif;
+  font-feature-settings: "kern" 1;
+}
+
+/* Smooth section transitions */
+section {
+  transition: background-color 0.3s ease;
+}
