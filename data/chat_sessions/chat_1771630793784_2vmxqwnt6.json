@@ -1,0 +1,40 @@
+{
+  "id": "chat_1771630793784_2vmxqwnt6",
+  "language": "Hindi",
+  "created_at": "2026-02-20T23:39:53.784Z",
+  "updated_at": "2026-02-20T23:44:15.079Z",
+  "fluency_scores": [
+    15
+  ],
+  "avg_fluency": 15,
+  "topics_covered": [
+    "Introduction",
+    "Learning Goals"
+  ],
+  "vocabulary_used": [
+    {
+      "word": "शानदार",
+      "meaning": "excellent",
+      "count": 1
+    },
+    {
+      "word": "विषय",
+      "meaning": "topic",
+      "count": 1
+    }
+  ],
+  "messages": [
+    {
+      "role": "user",
+      "content": "namaste, mujhe hindi sikhni hai",
+      "timestamp": "2026-02-20T23:44:15.079Z",
+      "fluency": 15,
+      "had_images": false
+    },
+    {
+      "role": "assistant",
+      "content": "नमस्ते! हिंदी सीखने का फैसला बहुत **शानदार** (excellent) है। हम धीरे-धीरे और मज़ेदार तरीके से बातचीत करके भाषा सीखेंगे। आज आप किस **विषय** (topic) पर बात करना चाहेंगे?",
+      "timestamp": "2026-02-20T23:44:15.079Z"
+    }
+  ]
+}

@@ -231,5 +231,1222 @@
       "level": 2,
       "difficulty": "beginner"
     }
+  },
+  {
+    "id": "conv_1771623968452",
+    "timestamp": "2026-02-20T21:46:08.452Z",
+    "scene_id": "scene_1",
+    "user_input": "मुझे गरम कॉफी का मग चाहिए",
+    "tasks": [
+      {
+        "task_id": "order_coffee",
+        "expected_intent": "order a hot coffee mug",
+        "keywords": [
+          "गरम",
+          "कॉफी",
+          "मग"
+        ]
+      }
+    ],
+    "evaluation": {
+      "scene_id": "scene_1",
+      "input_text": "मुझे गरम कॉफी का मग चाहिए",
+      "tasks": [
+        {
+          "task_id": "order_coffee",
+          "score": 100,
+          "completed": true,
+          "feedback": "Player clearly requested a hot coffee mug using all required keywords correctly."
+        }
+      ],
+      "npc_response": {
+        "text": "जी जल्दी से लाता हूँ! गरम कॉफी का मग आपके लिए।",
+        "translation": "I'll bring it right away! A hot coffee mug for you.",
+        "emotion": "happy"
+      },
+      "hint": null,
+      "xp_gained": 20,
+      "words_to_add": [
+        {
+          "word": "गरम",
+          "meaning": "hot",
+          "context_sentence": "मुझे गरम कॉफी का मग चाहिए"
+        },
+        {
+          "word": "कॉफी",
+          "meaning": "coffee",
+          "context_sentence": "मुझे गरम कॉफी का मग चाहिए"
+        },
+        {
+          "word": "मग",
+          "meaning": "mug",
+          "context_sentence": "मुझे गरम कॉफी का मग चाहिए"
+        }
+      ]
+    },
+    "xp_gained": 20,
+    "memory_after": {
+      "xp": 120,
+      "level": 2,
+      "difficulty": "beginner"
+    }
+  },
+  {
+    "id": "conv_1771644702465",
+    "timestamp": "2026-02-21T03:31:42.465Z",
+    "scene_id": "scene_1",
+    "user_input": "ਦੂਧ",
+    "tasks": [
+      {
+        "expected_intent": "Asking for your milk bottle to drink milk",
+        "keywords": [
+          "milk",
+          "feeder bottle",
+          "milk bottle"
+        ],
+        "task_id": "ask_for_milk"
+      },
+      {
+        "expected_intent": "Telling your parent that the environment feels too hot",
+        "keywords": [
+          "hot",
+          "heat",
+          "too hot"
+        ],
+        "task_id": "heat_complain"
+      },
+      {
+        "expected_intent": "Ask your parent to give you your teddy bear.",
+        "keywords": [
+          "teddy",
+          "toy",
+          "bear",
+          "teddy bear"
+        ],
+        "task_id": "teddy_request"
+      },
+      {
+        "expected_intent": "Call out to your mother",
+        "keywords": [
+          "mummy",
+          "momma",
+          "mom",
+          "mother",
+          "mama"
+        ],
+        "task_id": "call_mummy"
+      }
+    ],
+    "evaluation": {
+      "scene_id": "scene_1",
+      "input_text": "ਦੂਧ",
+      "tasks": [
+        {
+          "task_id": "ask_for_milk",
+          "score": 85,
+          "completed": true,
+          "feedback": "The player said 'milk' clearly, which matches the intent of asking for a milk bottle to drink."
+        },
+        {
+          "task_id": "heat_complain",
+          "score": 10,
+          "completed": false,
+          "feedback": "No mention of heat or hot — unrelated to the input."
+        },
+        {
+          "task_id": "teddy_request",
+          "score": 5,
+          "completed": false,
+          "feedback": "No mention of teddy or bear — not related."
+        },
+        {
+          "task_id": "call_mummy",
+          "score": 0,
+          "completed": false,
+          "feedback": "No word for mother or mummy — not applicable."
+        }
+      ],
+      "npc_response": {
+        "text": "ਹਾਂ ਬੱਚੇ, ਮੈਂ ਤੁਹਾਨੂੰ ਦੂਧ ਦਿੰਦਾ ਹਾਂ!",
+        "translation": "Yes, child, I’ll give you milk!",
+        "emotion": "happy"
+      },
+      "hint": null,
+      "xp_gained": 15,
+      "words_to_add": [
+        {
+          "word": "ਦੂਧ",
+          "meaning": "milk",
+          "context_sentence": "ਦੂਧ"
+        }
+      ]
+    },
+    "xp_gained": 20,
+    "memory_after": {
+      "xp": 189,
+      "level": 2,
+      "difficulty": "beginner"
+    }
+  },
+  {
+    "id": "conv_1771644746288",
+    "timestamp": "2026-02-21T03:32:26.288Z",
+    "scene_id": "scene_2",
+    "user_input": "ਦੁਸਤ",
+    "tasks": [
+      {
+        "expected_intent": "Tell someone that you want to be their friend",
+        "keywords": [
+          "friendship",
+          "want to be friends",
+          "make friends"
+        ],
+        "task_id": "make_friend"
+      }
+    ],
+    "evaluation": {
+      "scene_id": "scene_2",
+      "input_text": "ਦੁਸਤ",
+      "tasks": [
+        {
+          "task_id": "make_friend",
+          "score": 65,
+          "completed": false,
+          "feedback": "The word 'ਦੁਸਤ' means 'friend' in Punjabi, but the player didn't express the intent to make friends or want to be friends. They only said the word."
+        }
+      ],
+      "npc_response": {
+        "text": "ਦੁਸਤ? ਹਾਂ, ਮੈਂ ਤੇਰਾ ਦੋਸਤ ਬਣਨਾ ਚਾਹੁੰਦਾ ਹਾਂ!",
+        "translation": "Friend? Yes, I want to be your friend!",
+        "emotion": "encouraging"
+      },
+      "hint": "Try saying: 'ਮੈਂ ਤੇਰਾ ਦੋਸਤ ਬਣਨਾ ਚਾਹੁੰਦਾ ਹਾਂ' (I want to be your friend).",
+      "xp_gained": 5,
+      "words_to_add": [
+        {
+          "word": "ਦੁਸਤ",
+          "meaning": "friend",
+          "context_sentence": "ਦੁਸਤ"
+        }
+      ]
+    },
+    "xp_gained": 13,
+    "memory_after": {
+      "xp": 202,
+      "level": 2,
+      "difficulty": "beginner"
+    }
+  },
+  {
+    "id": "conv_1771644770363",
+    "timestamp": "2026-02-21T03:32:50.363Z",
+    "scene_id": "scene_2",
+    "user_input": "ਮੈਂ ਤੁਹਾਡਾ ਦੋਸਤ ਬਣਨਾ ਚਾਹੁੰਦਾ",
+    "tasks": [
+      {
+        "expected_intent": "Tell someone that you want to be their friend",
+        "keywords": [
+          "friendship",
+          "want to be friends",
+          "make friends"
+        ],
+        "task_id": "make_friend"
+      }
+    ],
+    "evaluation": {
+      "scene_id": "scene_2",
+      "input_text": "ਮੈਂ ਤੁਹਾਡਾ ਦੋਸਤ ਬਣਨਾ ਚਾਹੁੰਦਾ",
+      "tasks": [
+        {
+          "task_id": "make_friend",
+          "score": 95,
+          "completed": true,
+          "feedback": "The player clearly expressed the desire to become friends. Minor grammatical omission (missing 'ਚਾਹੁੰਦਾ ਹਾਂ') is acceptable at beginner level."
+        }
+      ],
+      "npc_response": {
+        "text": "ਵਾਹ! ਮੈਂ ਵੀ ਤੁਹਾਡਾ ਦੋਸਤ ਬਣਨਾ ਚਾਹੁੰਦਾ ਹਾਂ! 😊",
+        "translation": "Wow! I also want to be your friend! 😊",
+        "emotion": "happy"
+      },
+      "hint": null,
+      "xp_gained": 10,
+      "words_to_add": [
+        {
+          "word": "ਦੋਸਤ",
+          "meaning": "friend",
+          "context_sentence": "ਮੈਂ ਤੁਹਾਡਾ ਦੋਸਤ ਬਣਨਾ ਚਾਹੁੰਦਾ"
+        },
+        {
+          "word": "ਬਣਨਾ",
+          "meaning": "to become",
+          "context_sentence": "ਮੈਂ ਤੁਹਾਡਾ ਦੋਸਤ ਬਣਨਾ ਚਾਹੁੰਦਾ"
+        },
+        {
+          "word": "ਚਾਹੁੰਦਾ",
+          "meaning": "want (masculine)",
+          "context_sentence": "ਮੈਂ ਤੁਹਾਡਾ ਦੋਸਤ ਬਣਨਾ ਚਾਹੁੰਦਾ"
+        }
+      ]
+    },
+    "xp_gained": 19,
+    "memory_after": {
+      "xp": 221,
+      "level": 2,
+      "difficulty": "beginner"
+    }
+  },
+  {
+    "id": "conv_1771648035751",
+    "timestamp": "2026-02-21T04:27:15.752Z",
+    "scene_id": "scene_1",
+    "user_input": "ਮੰਮੀ ਮੈਨੂੰ ਗਰਮ ਦੁੱਧ ਪੀਂਦਾ ਹਾਂ",
+    "tasks": [
+      {
+        "expected_intent": "Asking for your milk bottle to drink milk",
+        "keywords": [
+          "milk",
+          "feeder bottle",
+          "milk bottle"
+        ],
+        "task_id": "ask_for_milk"
+      },
+      {
+        "expected_intent": "Telling your parent that the environment feels too hot",
+        "keywords": [
+          "hot",
+          "heat",
+          "too hot"
+        ],
+        "task_id": "heat_complain"
+      },
+      {
+        "expected_intent": "Ask your parent to give you your teddy bear.",
+        "keywords": [
+          "teddy",
+          "toy",
+          "bear",
+          "teddy bear"
+        ],
+        "task_id": "teddy_request"
+      },
+      {
+        "expected_intent": "Call out to your mother",
+        "keywords": [
+          "mummy",
+          "momma",
+          "mom",
+          "mother",
+          "mama"
+        ],
+        "task_id": "call_mummy"
+      }
+    ],
+    "evaluation": {
+      "scene_id": "scene_1",
+      "input_text": "ਮੰਮੀ ਮੈਨੂੰ ਗਰਮ ਦੁੱਧ ਪੀਂਦਾ ਹਾਂ",
+      "tasks": [
+        {
+          "task_id": "ask_for_milk",
+          "score": 65,
+          "completed": false,
+          "feedback": "Player mentioned 'milk' and 'drink', but used 'ਪੀਂਦਾ ਹਾਂ' (I drink) instead of asking for it. Needs to say 'give me milk' or 'can I have milk?'"
+        },
+        {
+          "task_id": "heat_complain",
+          "score": 40,
+          "feedback": "Player said 'ਗਰਮ' (hot), but it describes the milk, not the environment. Not a heat complaint."
+        },
+        {
+          "task_id": "teddy_request",
+          "score": 0,
+          "feedback": "No mention of teddy, toy, or bear. Not related."
+        },
+        {
+          "task_id": "call_mummy",
+          "score": 100,
+          "completed": true,
+          "feedback": "Player correctly used 'ਮੰਮੀ' to call mother. Perfect!"
+        }
+      ],
+      "npc_response": {
+        "text": "ਮੰਮੀ! ਮੈਨੂੰ ਦੁੱਧ ਦੇ ਦੇ ਕਿਰਪਾ ਕਰਕੇ।",
+        "translation": "Mummy! Please give me milk.",
+        "emotion": "encouraging"
+      },
+      "hint": "Try saying: 'ਮੰਮੀ, ਮੈਨੂੰ ਦੁੱਧ ਦੇ ਦੇ।' (Mummy, give me milk.) You said 'I drink milk' — but you want to ask for it!",
+      "xp_gained": 15,
+      "words_to_add": [
+        {
+          "word": "ਮੰਮੀ",
+          "meaning": "mummy/mom",
+          "context_sentence": "ਮੰਮੀ ਮੈਨੂੰ ਗਰਮ ਦੁੱਧ ਪੀਂਦਾ ਹਾਂ"
+        },
+        {
+          "word": "ਦੁੱਧ",
+          "meaning": "milk",
+          "context_sentence": "ਮੰਮੀ ਮੈਨੂੰ ਗਰਮ ਦੁੱਧ ਪੀਂਦਾ ਹਾਂ"
+        },
+        {
+          "word": "ਗਰਮ",
+          "meaning": "hot",
+          "context_sentence": "ਮੰਮੀ ਮੈਨੂੰ ਗਰਮ ਦੁੱਧ ਪੀਂਦਾ ਹਾਂ"
+        }
+      ]
+    },
+    "xp_gained": 41,
+    "memory_after": {
+      "xp": 262,
+      "level": 3,
+      "difficulty": "intermediate"
+    }
+  },
+  {
+    "id": "conv_1771648063310",
+    "timestamp": "2026-02-21T04:27:43.310Z",
+    "scene_id": "scene_1",
+    "user_input": "ਦੁੱਧ ਗਰਮ",
+    "tasks": [
+      {
+        "expected_intent": "Asking for your milk bottle to drink milk",
+        "keywords": [
+          "milk",
+          "feeder bottle",
+          "milk bottle"
+        ],
+        "task_id": "ask_for_milk"
+      },
+      {
+        "expected_intent": "Telling your parent that the environment feels too hot",
+        "keywords": [
+          "hot",
+          "heat",
+          "too hot"
+        ],
+        "task_id": "heat_complain"
+      },
+      {
+        "expected_intent": "Ask your parent to give you your teddy bear.",
+        "keywords": [
+          "teddy",
+          "toy",
+          "bear",
+          "teddy bear"
+        ],
+        "task_id": "teddy_request"
+      },
+      {
+        "expected_intent": "Call out to your mother",
+        "keywords": [
+          "mummy",
+          "momma",
+          "mom",
+          "mother",
+          "mama"
+        ],
+        "task_id": "call_mummy"
+      }
+    ],
+    "evaluation": {
+      "scene_id": "scene_1",
+      "input_text": "ਦੁੱਧ ਗਰਮ",
+      "tasks": [
+        {
+          "task_id": "ask_for_milk",
+          "score": 85,
+          "completed": true,
+          "feedback": "User clearly wants milk and implies it's warm — likely asking for a warm milk bottle. Matches intent well despite minimal wording."
+        },
+        {
+          "task_id": "heat_complain",
+          "score": 30,
+          "completed": false,
+          "feedback": "The word 'ਗਰਮ' (hot) is used, but there's no indication the user is complaining about the environment. Misaligned intent."
+        },
+        {
+          "task_id": "teddy_request",
+          "score": 10,
+          "completed": false,
+          "feedback": "No mention of teddy, bear, or toy. Completely unrelated."
+        },
+        {
+          "task_id": "call_mummy",
+          "score": 5,
+          "completed": false,
+          "feedback": "No word for mother or mummy. Not related to the intent."
+        }
+      ],
+      "npc_response": {
+        "text": "ਹਾਂ ਬੱਚੇ, ਤੁਹਾਡਾ ਦੁੱਧ ਗਰਮ ਕਰ ਕੇ ਲਿਆਉਂਦਾ ਹਾਂ!",
+        "translation": "Yes, child, I'll bring your milk warmed up!",
+        "emotion": "happy"
+      },
+      "hint": null,
+      "xp_gained": 25,
+      "words_to_add": [
+        {
+          "word": "ਦੁੱਧ",
+          "meaning": "milk",
+          "context_sentence": "ਦੁੱਧ ਗਰਮ"
+        },
+        {
+          "word": "ਗਰਮ",
+          "meaning": "hot/warm",
+          "context_sentence": "ਦੁੱਧ ਗਰਮ"
+        }
+      ]
+    },
+    "xp_gained": 26,
+    "memory_after": {
+      "xp": 288,
+      "level": 3,
+      "difficulty": "intermediate"
+    }
+  },
+  {
+    "id": "conv_1771648088355",
+    "timestamp": "2026-02-21T04:28:08.355Z",
+    "scene_id": "scene_1",
+    "user_input": "ਮਮਾ ਮੁਝੇ ਟੈਡੀ ਚਾਹੀਏ",
+    "tasks": [
+      {
+        "expected_intent": "Asking for your milk bottle to drink milk",
+        "keywords": [
+          "milk",
+          "feeder bottle",
+          "milk bottle"
+        ],
+        "task_id": "ask_for_milk"
+      },
+      {
+        "expected_intent": "Telling your parent that the environment feels too hot",
+        "keywords": [
+          "hot",
+          "heat",
+          "too hot"
+        ],
+        "task_id": "heat_complain"
+      },
+      {
+        "expected_intent": "Ask your parent to give you your teddy bear.",
+        "keywords": [
+          "teddy",
+          "toy",
+          "bear",
+          "teddy bear"
+        ],
+        "task_id": "teddy_request"
+      },
+      {
+        "expected_intent": "Call out to your mother",
+        "keywords": [
+          "mummy",
+          "momma",
+          "mom",
+          "mother",
+          "mama"
+        ],
+        "task_id": "call_mummy"
+      }
+    ],
+    "evaluation": {
+      "scene_id": "scene_1",
+      "input_text": "ਮਮਾ ਮੁੰਝੇ ਟੈਡੀ ਚਾਹੀਏ",
+      "tasks": [
+        {
+          "task_id": "ask_for_milk",
+          "score": 10,
+          "completed": false,
+          "feedback": "The user mentioned 'teddy', not milk or bottle. No connection to the expected intent."
+        },
+        {
+          "task_id": "heat_complain",
+          "score": 5,
+          "completed": false,
+          "feedback": "No mention of heat, hot, or discomfort. Completely unrelated."
+        },
+        {
+          "task_id": "teddy_request",
+          "score": 95,
+          "completed": true,
+          "feedback": "User clearly asks for 'teddy' using the correct term in Punjabi. Intent is fully understood despite minor spelling ('ਮੁੰਝੇ' instead of 'ਮੁੱਝੇ')."
+        },
+        {
+          "task_id": "call_mummy",
+          "score": 90,
+          "completed": true,
+          "feedback": "User uses 'ਮਮਾ' — a common affectionate form of 'mummy' in Punjabi. Clear and natural address."
+        }
+      ],
+      "npc_response": {
+        "text": "ਹਾਂ ਬੇਟਾ, ਤੇਰਾ ਟੈਡੀ ਇੱਥੇ ਹੈ! ਇੱਕ ਮਿੰਟ ਵਿੱਚ ਲੈ ਆਉਂਦਾ ਹਾਂ।",
+        "translation": "Yes, my love, your teddy is right here! I’ll get it for you in a moment.",
+        "emotion": "happy"
+      },
+      "hint": null,
+      "xp_gained": 25,
+      "words_to_add": [
+        {
+          "word": "ਮਮਾ",
+          "meaning": "mummy (affectionate term for mother)",
+          "context_sentence": "ਮਮਾ ਮੁੰਝੇ ਟੈਡੀ ਚਾਹੀਏ"
+        },
+        {
+          "word": "ਟੈਡੀ",
+          "meaning": "teddy bear (toy)",
+          "context_sentence": "ਮਮਾ ਮੁੰਝੇ ਟੈਡੀ ਚਾਹੀਏ"
+        },
+        {
+          "word": "ਚਾਹੀਏ",
+          "meaning": "I need / I want (polite/form of wanting)",
+          "context_sentence": "ਮਮਾ ਮੁੰਝੇ ਟੈਡੀ ਚਾਹੀਏ"
+        }
+      ]
+    },
+    "xp_gained": 40,
+    "memory_after": {
+      "xp": 328,
+      "level": 3,
+      "difficulty": "intermediate"
+    }
+  },
+  {
+    "id": "conv_1771648106316",
+    "timestamp": "2026-02-21T04:28:26.316Z",
+    "scene_id": "scene_1",
+    "user_input": "ਗਰਮੀ ਲੱਗ ਰਹੀ ਹੈ",
+    "tasks": [
+      {
+        "expected_intent": "Asking for your milk bottle to drink milk",
+        "keywords": [
+          "milk",
+          "feeder bottle",
+          "milk bottle"
+        ],
+        "task_id": "ask_for_milk"
+      },
+      {
+        "expected_intent": "Telling your parent that the environment feels too hot",
+        "keywords": [
+          "hot",
+          "heat",
+          "too hot"
+        ],
+        "task_id": "heat_complain"
+      },
+      {
+        "expected_intent": "Ask your parent to give you your teddy bear.",
+        "keywords": [
+          "teddy",
+          "toy",
+          "bear",
+          "teddy bear"
+        ],
+        "task_id": "teddy_request"
+      },
+      {
+        "expected_intent": "Call out to your mother",
+        "keywords": [
+          "mummy",
+          "momma",
+          "mom",
+          "mother",
+          "mama"
+        ],
+        "task_id": "call_mummy"
+      }
+    ],
+    "evaluation": {
+      "scene_id": "scene_1",
+      "input_text": "ਗਰਮੀ ਲੱਗ ਰਹੀ ਹੈ",
+      "tasks": [
+        {
+          "task_id": "ask_for_milk",
+          "score": 10,
+          "completed": false,
+          "feedback": "The input does not mention milk or a bottle at all."
+        },
+        {
+          "task_id": "heat_complain",
+          "score": 95,
+          "completed": true,
+          "feedback": "The phrase 'ਗਰਮੀ ਲੱਗ ਰਹੀ ਹੈ' correctly expresses that it feels hot — a natural and accurate way to complain about heat in Punjabi."
+        },
+        {
+          "task_id": "teddy_request",
+          "score": 5,
+          "completed": false,
+          "feedback": "No mention of teddy, bear, or toy."
+        },
+        {
+          "task_id": "call_mummy",
+          "score": 0,
+          "completed": false,
+          "feedback": "No word for mother or mummy is present."
+        }
+      ],
+      "npc_response": {
+        "text": "ਹਾਂ ਬੱਚੇ, ਠੰਡਾ ਪਾਣੀ ਲਿਆ ਦੇਂਦਾ ਹਾਂ — ਇਹ ਗਰਮੀ ਤੋਂ ਬਚਣ ਲਈ!",
+        "translation": "Yes, child, I'll bring you cold water — to beat this heat!",
+        "emotion": "encouraging"
+      },
+      "hint": null,
+      "xp_gained": 25,
+      "words_to_add": [
+        {
+          "word": "ਗਰਮੀ",
+          "meaning": "heat",
+          "context_sentence": "ਗਰਮੀ ਲੱਗ ਰਹੀ ਹੈ"
+        }
+      ]
+    },
+    "xp_gained": 22,
+    "memory_after": {
+      "xp": 350,
+      "level": 3,
+      "difficulty": "intermediate"
+    }
+  },
+  {
+    "id": "conv_1771648168680",
+    "timestamp": "2026-02-21T04:29:28.680Z",
+    "scene_id": "scene_2",
+    "user_input": "ਕਿਆ ਤੁਮ ਮੇਰੀ ਦੋਸਤ ਬਣੋਗੀ",
+    "tasks": [
+      {
+        "expected_intent": "Tell someone that you want to be their friend",
+        "keywords": [
+          "friendship",
+          "want to be friends",
+          "make friends"
+        ],
+        "task_id": "make_friend"
+      }
+    ],
+    "evaluation": {
+      "scene_id": "scene_2",
+      "input_text": "ਕਿਆ ਤੁਮ ਮੇਰੀ ਦੋਸਤ ਬਣੋਗੀ",
+      "tasks": [
+        {
+          "task_id": "make_friend",
+          "score": 65,
+          "completed": false,
+          "feedback": "The intent to ask someone to be friends is clear, but the grammar is incorrect — 'ਬਣੋਗੀ' is feminine singular, which doesn't match 'ਤੁਮ' (plural/informal). Also, 'ਕਿਆ' should be 'ਕੀਆ' or better yet, rephrase for natural flow."
+        }
+      ],
+      "npc_response": {
+        "text": "ਅਰੇ ਓਹ ਤਾਂ ਹੋ ਸਕਦਾ ਹੈ! ਪਰ ਤੁਸੀਂ ਕਹਿ ਸਕਦੇ ਹੋ — 'ਕੀ ਤੁਸੀਂ ਮੇਰੇ ਦੋਸਤ ਬਣੋਗੇ?'",
+        "translation": "Oh, that could totally happen! But you could say — 'Would you be my friend?'",
+        "emotion": "encouraging"
+      },
+      "hint": "Try saying: 'ਕੀ ਤੁਸੀਂ ਮੇਰੇ ਦੋਸਤ ਬਣੋਗੇ?' — use 'ਬਣੋਗੇ' for plural/informal 'you', or 'ਬਣੋਗੀ' only if speaking to a girl.",
+      "xp_gained": 15,
+      "words_to_add": [
+        {
+          "word": "ਦੋਸਤ",
+          "meaning": "friend",
+          "context_sentence": "ਕਿਆ ਤੁਮ ਮੇਰੀ ਦੋਸਤ ਬਣੋਗੀ"
+        },
+        {
+          "word": "ਬਣੋਗੀ",
+          "meaning": "will become (feminine)",
+          "context_sentence": "ਕਿਆ ਤੁਮ ਮੇਰੀ ਦੋਸਤ ਬਣੋਗੀ"
+        },
+        {
+          "word": "ਕਿਆ",
+          "meaning": "what (incorrect form of 'ਕੀ')",
+          "context_sentence": "ਕਿਆ ਤੁਮ ਮੇਰੀ ਦੋਸਤ ਬਣੋਗੀ"
+        }
+      ]
+    },
+    "xp_gained": 13,
+    "memory_after": {
+      "xp": 363,
+      "level": 3,
+      "difficulty": "intermediate"
+    }
+  },
+  {
+    "id": "conv_1771648196325",
+    "timestamp": "2026-02-21T04:29:56.325Z",
+    "scene_id": "scene_2",
+    "user_input": "ਕਿਆ ਤੁਸੀਂ ਮੇਰੀ ਦਸਤ ਨਾਲ ਬਣੂਗੀ",
+    "tasks": [
+      {
+        "expected_intent": "Tell someone that you want to be their friend",
+        "keywords": [
+          "friendship",
+          "want to be friends",
+          "make friends"
+        ],
+        "task_id": "make_friend"
+      }
+    ],
+    "evaluation": {
+      "scene_id": "scene_2",
+      "input_text": "ਕਿਆ ਤੁਸੀਂ ਮੇਰੀ ਦਸਤ ਨਾਲ ਬਣੂਗੀ",
+      "tasks": [
+        {
+          "task_id": "make_friend",
+          "score": 45,
+          "completed": false,
+          "feedback": "The intent to make friends is present, but the phrasing 'ਮੇਰੀ ਦਸਤ ਨਾਲ ਬਣੂਗੀ' is incorrect and confusing—it literally means 'will you become with my hand.' The grammar and word choice do not convey friendship."
+        }
+      ],
+      "npc_response": {
+        "text": "ਦਸਤ ਨਾਲ ਨਹੀਂ, ਦਿਲ ਨਾਲ ਬਣੀਏ! ਤੁਸੀਂ ਮੇਰਾ ਦੋਸਤ ਬਣਨਾ ਚਾਹੁੰਦੇ ਹੋ?",
+        "translation": "Not with the hand, with the heart! Do you want to be my friend?",
+        "emotion": "encouraging"
+      },
+      "hint": "To say 'I want to be your friend,' try: 'ਮੈਂ ਤੁਹਾਡਾ ਦੋਸਤ ਬਣਨਾ ਚਾਹੁੰਦਾ/ਚਾਹੁੰਦੀ ਹਾਂ।' The word 'ਦੋਸਤ' means friend, and 'ਬਣਨਾ' means to become.",
+      "xp_gained": 0,
+      "words_to_add": [
+        {
+          "word": "ਦੋਸਤ",
+          "meaning": "friend",
+          "context_sentence": "ਮੈਂ ਤੁਹਾਡਾ ਦੋਸਤ ਬਣਨਾ ਚਾਹੁੰਦਾ ਹਾਂ।"
+        },
+        {
+          "word": "ਬਣਨਾ",
+          "meaning": "to become",
+          "context_sentence": "ਅਸੀਂ ਦੋਸਤ ਬਣੀਏ।"
+        },
+        {
+          "word": "ਦਿਲ",
+          "meaning": "heart",
+          "context_sentence": "ਦਿਲ ਨਾਲ ਬਣੀਏ, ਸਿਰਫ਼ ਦਸਤ ਨਾਲ ਨਹੀਂ।"
+        }
+      ]
+    },
+    "xp_gained": 9,
+    "memory_after": {
+      "xp": 372,
+      "level": 3,
+      "difficulty": "intermediate"
+    }
+  },
+  {
+    "id": "conv_1771648268886",
+    "timestamp": "2026-02-21T04:31:08.886Z",
+    "scene_id": "scene_2",
+    "user_input": "ਦੋਸਤੋ ਮੈਨੂੰ",
+    "tasks": [
+      {
+        "expected_intent": "Tell someone that you want to be their friend",
+        "keywords": [
+          "friendship",
+          "want to be friends",
+          "make friends"
+        ],
+        "task_id": "make_friend"
+      }
+    ],
+    "evaluation": {
+      "scene_id": "scene_2",
+      "input_text": "ਦੋਸਤੋ ਮੈਨੂੰ",
+      "tasks": [
+        {
+          "task_id": "make_friend",
+          "score": 40,
+          "completed": false,
+          "feedback": "The input is incomplete and lacks a clear verb or intent. It starts with 'friends' but doesn't say what the player wants to do with them."
+        }
+      ],
+      "npc_response": {
+        "text": "ਦੋਸਤੋ ਮੈਨੂੰ ਦੋਸਤ ਬਣਨਾ ਚਾਹੀਦਾ ਹੈ? ਮੈਂ ਤੁਹਾਡਾ ਦੋਸਤ ਬਣ ਸਕਦਾ ਹਾਂ!",
+        "translation": "Do you want to be friends with me? I can be your friend!",
+        "emotion": "encouraging"
+      },
+      "hint": "Try saying: 'ਮੈਂ ਤੁਹਾਡਾ ਦੋਸਤ ਬਣਨਾ ਚਾਹੁੰਦਾ ਹਾਂ' (I want to be your friend).",
+      "xp_gained": 0,
+      "words_to_add": [
+        {
+          "word": "ਦੋਸਤੋ",
+          "meaning": "friends (vocative form)",
+          "context_sentence": "ਦੋਸਤੋ ਮੈਨੂੰ"
+        },
+        {
+          "word": "ਮੈਨੂੰ",
+          "meaning": "to me",
+          "context_sentence": "ਦੋਸਤੋ ਮੈਨੂੰ"
+        }
+      ]
+    },
+    "xp_gained": 8,
+    "memory_after": {
+      "xp": 380,
+      "level": 3,
+      "difficulty": "intermediate"
+    }
+  },
+  {
+    "id": "conv_1771648301565",
+    "timestamp": "2026-02-21T04:31:41.565Z",
+    "scene_id": "scene_2",
+    "user_input": "ਪਲੀਜ਼ ਮੇਰਾ ਦੋਸਤ ਬਣੋ",
+    "tasks": [
+      {
+        "expected_intent": "Tell someone that you want to be their friend",
+        "keywords": [
+          "friendship",
+          "want to be friends",
+          "make friends"
+        ],
+        "task_id": "make_friend"
+      }
+    ],
+    "evaluation": {
+      "scene_id": "scene_2",
+      "input_text": "ਪਲੀਜ਼ ਮੇਰਾ ਦੋਸਤ ਬਣੋ",
+      "tasks": [
+        {
+          "task_id": "make_friend",
+          "score": 90,
+          "completed": true,
+          "feedback": "The player clearly expresses the desire to become friends. The phrase is understandable and conveys the intended meaning, even if slightly informal."
+        }
+      ],
+      "npc_response": {
+        "text": "ਅਰੇ ਵਾਹ! ਜ਼ਰੂਰ, ਮੈਂ ਤੇਰਾ ਦੋਸਤ ਬਣ ਜਾਵਾਂਗਾ! 😊",
+        "translation": "Oh wow! Of course, I’ll become your friend! 😊",
+        "emotion": "happy"
+      },
+      "hint": null,
+      "xp_gained": 15,
+      "words_to_add": [
+        {
+          "word": "ਦੋਸਤ",
+          "meaning": "friend",
+          "context_sentence": "ਪਲੀਜ਼ ਮੇਰਾ ਦੋਸਤ ਬਣੋ"
+        },
+        {
+          "word": "ਬਣੋ",
+          "meaning": "become",
+          "context_sentence": "ਪਲੀਜ਼ ਮੇਰਾ ਦੋਸਤ ਬਣੋ"
+        },
+        {
+          "word": "ਪਲੀਜ਼",
+          "meaning": "please",
+          "context_sentence": "ਪਲੀਜ਼ ਮੇਰਾ ਦੋਸਤ ਬਣੋ"
+        }
+      ]
+    },
+    "xp_gained": 18,
+    "memory_after": {
+      "xp": 398,
+      "level": 3,
+      "difficulty": "intermediate"
+    }
+  },
+  {
+    "id": "conv_1771651720594",
+    "timestamp": "2026-02-21T05:28:40.594Z",
+    "scene_id": "scene_1",
+    "user_input": "ਦੂਧ",
+    "tasks": [
+      {
+        "expected_intent": "Asking for your milk bottle to drink milk",
+        "keywords": [
+          "milk",
+          "feeder bottle",
+          "milk bottle"
+        ],
+        "task_id": "ask_for_milk"
+      },
+      {
+        "expected_intent": "Telling your parent that the environment feels too hot",
+        "keywords": [
+          "hot",
+          "heat",
+          "too hot"
+        ],
+        "task_id": "heat_complain"
+      },
+      {
+        "expected_intent": "Ask your parent to give you your teddy bear.",
+        "keywords": [
+          "teddy",
+          "toy",
+          "bear",
+          "teddy bear"
+        ],
+        "task_id": "teddy_request"
+      },
+      {
+        "expected_intent": "Call out to your mother",
+        "keywords": [
+          "mummy",
+          "momma",
+          "mom",
+          "mother",
+          "mama"
+        ],
+        "task_id": "call_mummy"
+      }
+    ],
+    "evaluation": {
+      "scene_id": "scene_1",
+      "input_text": "ਦੂਧ",
+      "tasks": [
+        {
+          "task_id": "ask_for_milk",
+          "score": 85,
+          "completed": true,
+          "feedback": "The word 'ਦੂਧ' (milk) clearly matches the intent to ask for milk. While 'milk bottle' wasn't specified, the context implies a request for milk to drink, which is sufficient at intermediate level."
+        },
+        {
+          "task_id": "heat_complain",
+          "score": 0,
+          "completed": false,
+          "feedback": "No mention of heat or hot; unrelated to the input."
+        },
+        {
+          "task_id": "teddy_request",
+          "score": 0,
+          "completed": false,
+          "feedback": "No reference to teddy, bear, or toy."
+        },
+        {
+          "task_id": "call_mummy",
+          "score": 0,
+          "completed": false,
+          "feedback": "No mention of mother, mom, or mummy."
+        }
+      ],
+      "npc_response": {
+        "text": "ਦੂਧ? ਹਾਂ, ਮੈਂ ਤੁਹਾਡੇ ਲਈ ਇੱਕ ਬੋਤਲ ਲੈ ਕੇ ਆਉਂਦਾ ਹਾਂ!",
+        "translation": "Milk? Yes, I'll bring you a bottle!",
+        "emotion": "happy"
+      },
+      "hint": null,
+      "xp_gained": 15,
+      "words_to_add": [
+        {
+          "word": "ਦੂਧ",
+          "meaning": "milk",
+          "context_sentence": "ਦੂਧ"
+        }
+      ]
+    },
+    "xp_gained": 17,
+    "memory_after": {
+      "xp": 415,
+      "level": 3,
+      "difficulty": "intermediate"
+    }
+  },
+  {
+    "id": "conv_1771651818283",
+    "timestamp": "2026-02-21T05:30:18.283Z",
+    "scene_id": "scene_1",
+    "user_input": "ਮਮੀ ਕੋ ਬਤਾਨਾ ਹੈ ਕਿ ਗਰਮੀ ਲੱਗ ਰਹੀ ਹੈ",
+    "tasks": [
+      {
+        "expected_intent": "Asking for your milk bottle to drink milk",
+        "keywords": [
+          "milk",
+          "feeder bottle",
+          "milk bottle"
+        ],
+        "task_id": "ask_for_milk"
+      },
+      {
+        "expected_intent": "Telling your parent that the environment feels too hot",
+        "keywords": [
+          "hot",
+          "heat",
+          "too hot"
+        ],
+        "task_id": "heat_complain"
+      },
+      {
+        "expected_intent": "Ask your parent to give you your teddy bear.",
+        "keywords": [
+          "teddy",
+          "toy",
+          "bear",
+          "teddy bear"
+        ],
+        "task_id": "teddy_request"
+      },
+      {
+        "expected_intent": "Call out to your mother",
+        "keywords": [
+          "mummy",
+          "momma",
+          "mom",
+          "mother",
+          "mama"
+        ],
+        "task_id": "call_mummy"
+      }
+    ],
+    "evaluation": {
+      "scene_id": "scene_1",
+      "input_text": "ਮਮੀ ਕੋ ਬਤਾਨਾ ਹੈ ਕਿ ਗਰਮੀ ਲੱਗ ਰਹੀ ਹੈ",
+      "tasks": [
+        {
+          "task_id": "ask_for_milk",
+          "score": 0,
+          "completed": false,
+          "feedback": "The player did not mention milk or a bottle at all."
+        },
+        {
+          "task_id": "heat_complain",
+          "score": 95,
+          "completed": true,
+          "feedback": "Player clearly expresses that it feels hot ('ਗਰਮੀ ਲੱਗ ਰਹੀ ਹੈ'), which matches the intent perfectly."
+        },
+        {
+          "task_id": "teddy_request",
+          "score": 0,
+          "completed": false,
+          "feedback": "No mention of teddy, toy, or bear."
+        },
+        {
+          "task_id": "call_mummy",
+          "score": 100,
+          "completed": true,
+          "feedback": "Player directly addresses 'ਮਮੀ' — perfect use of the target word."
+        }
+      ],
+      "npc_response": {
+        "text": "ਅਰੇ ਬੱਚੇ, ਗਰਮੀ ਲੱਗ ਰਹੀ ਹੈ? ਚਲੋ, ਠੰਡਾ ਪਾਣੀ ਲਿਆ ਦੇਂਦਾ ਹਾਂ!",
+        "translation": "Oh dear, it's feeling hot? Come on, I'll bring you some cold water!",
+        "emotion": "encouraging"
+      },
+      "hint": null,
+      "xp_gained": 50,
+      "words_to_add": [
+        {
+          "word": "ਮਮੀ",
+          "meaning": "mummy/mom",
+          "context_sentence": "ਮਮੀ ਕੋ ਬਤਾਨਾ ਹੈ ਕਿ ਗਰਮੀ ਲੱਗ ਰਹੀ ਹੈ"
+        },
+        {
+          "word": "ਗਰਮੀ",
+          "meaning": "heat",
+          "context_sentence": "ਮਮੀ ਕੋ ਬਤਾਨਾ ਹੈ ਕਿ ਗਰਮੀ ਲੱਗ ਰਹੀ ਹੈ"
+        },
+        {
+          "word": "ਲੱਗ ਰਹੀ ਹੈ",
+          "meaning": "is feeling / is coming",
+          "context_sentence": "ਮਮੀ ਕੋ ਬਤਾਨਾ ਹੈ ਕਿ ਗਰਮੀ ਲੱਗ ਰਹੀ ਹੈ"
+        }
+      ]
+    },
+    "xp_gained": 39,
+    "memory_after": {
+      "xp": 454,
+      "level": 3,
+      "difficulty": "intermediate"
+    }
+  },
+  {
+    "id": "conv_1771651848101",
+    "timestamp": "2026-02-21T05:30:48.101Z",
+    "scene_id": "scene_1",
+    "user_input": "ਮੁਝੇ ਟੈਡੀ ਬਾਰ ਚਾਹੀਏ ਤੋਂ ਬੇਸਿਕ ਕੀ ਹੈ ਇਸਮੇਂ ਫੀਡਬੈਕ ਸਿਸਟਮ",
+    "tasks": [
+      {
+        "expected_intent": "Asking for your milk bottle to drink milk",
+        "keywords": [
+          "milk",
+          "feeder bottle",
+          "milk bottle"
+        ],
+        "task_id": "ask_for_milk"
+      },
+      {
+        "expected_intent": "Telling your parent that the environment feels too hot",
+        "keywords": [
+          "hot",
+          "heat",
+          "too hot"
+        ],
+        "task_id": "heat_complain"
+      },
+      {
+        "expected_intent": "Ask your parent to give you your teddy bear.",
+        "keywords": [
+          "teddy",
+          "toy",
+          "bear",
+          "teddy bear"
+        ],
+        "task_id": "teddy_request"
+      },
+      {
+        "expected_intent": "Call out to your mother",
+        "keywords": [
+          "mummy",
+          "momma",
+          "mom",
+          "mother",
+          "mama"
+        ],
+        "task_id": "call_mummy"
+      }
+    ],
+    "evaluation": {
+      "scene_id": "scene_1",
+      "input_text": "ਮੁਝੇ ਟੈਡੀ ਬਾਰ ਚਾਹੀਏ ਤੋਂ ਬੇਸਿਕ ਕੀ ਹੈ ਇਸਮੇਂ ਫੀਡਬੈਕ ਸਿਸਟਮ",
+      "tasks": [
+        {
+          "task_id": "ask_for_milk",
+          "score": 10,
+          "completed": false,
+          "feedback": "The user mentioned 'teddy' but not 'milk' or 'bottle'. No connection to the expected intent."
+        },
+        {
+          "task_id": "heat_complain",
+          "score": 5,
+          "completed": false,
+          "feedback": "No mention of heat, hot, or discomfort. Completely unrelated."
+        },
+        {
+          "task_id": "teddy_request",
+          "score": 75,
+          "completed": true,
+          "feedback": "User said 'ਮੁਝੇ ਟੈਡੀ ਬਾਰ ਚਾਹੀਏ' — this clearly means 'I want the teddy'. Minor grammar issue ('ਬਾਰ' instead of 'ਲਈ'), but meaning is clear. 'Teddy bear' intent is met."
+        },
+        {
+          "task_id": "call_mummy",
+          "score": 20,
+          "completed": false,
+          "feedback": "No word for 'mummy', 'mom', or similar. User is not addressing a parent directly."
+        }
+      ],
+      "npc_response": {
+        "text": "ਹਾਂ ਬੱਚੇ, ਤੁਹਾਡਾ ਟੈਡੀ ਇੱਥੇ ਹੈ! ਪਰ ਇਹ 'ਫੀਡਬੈਕ ਸਿਸਟਮ' ਕੀ ਹੈ? ਤੁਸੀਂ ਕੀ ਕਹਿਣਾ ਚਾਹੁੰਦੇ ਹੋ?",
+        "translation": "Yes, child, your teddy is here! But what is this 'feedback system'? What are you trying to say?",
+        "emotion": "encouraging"
+      },
+      "hint": "You can say: 'ਮੁਝੇ ਮੇਰਾ ਟੈਡੀ ਚਾਹੀਏ' — that means 'I want my teddy'. The word 'ਬਾਰ' isn't needed here.",
+      "xp_gained": 25,
+      "words_to_add": [
+        {
+          "word": "ਟੈਡੀ",
+          "meaning": "teddy bear",
+          "context_sentence": "ਮੁਝੇ ਟੈਡੀ ਬਾਰ ਚਾਹੀਏ"
+        },
+        {
+          "word": "ਚਾਹੀਏ",
+          "meaning": "I want / I need",
+          "context_sentence": "ਮੁਝੇ ਟੈਡੀ ਬਾਰ ਚਾਹੀਏ"
+        },
+        {
+          "word": "ਬੇਸਿਕ",
+          "meaning": "basic",
+          "context_sentence": "ਤੋਂ ਬੇਸਿਕ ਕੀ ਹੈ ਇਸਮੇਂ ਫੀਡਬੈਕ ਸਿਸਟਮ"
+        }
+      ]
+    },
+    "xp_gained": 22,
+    "memory_after": {
+      "xp": 476,
+      "level": 3,
+      "difficulty": "intermediate"
+    }
   }
 ]

@@ -265,6 +265,9 @@ Evaluate the user input, respond in character as the NPC, and return ONLY the JS
   memory.difficulty = getDifficulty(newLevel);
 
   // Track words learned
+  if (!memory.words_learned || typeof memory.words_learned !== 'object') {
+    memory.words_learned = {};
+  }
   for (const word of llmResult.words_to_add || []) {
     if (word.word) {
       memory.words_learned[word.word] = (memory.words_learned[word.word] || 0) + 1;

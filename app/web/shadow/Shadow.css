@@ -1,0 +1,1102 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=DM+Serif+Display&display=swap');
+
+/* ─────────────────────────────────────────────
+   SHADOW MODE — DESIGN TOKENS
+───────────────────────────────────────────── */
+:root {
+    --sm-bg: #1A1D2E;
+    --sm-surface: #242838;
+    --sm-surface-flip: #2C3050;
+    --sm-surface-hover: #2A2F48;
+    --sm-accent: #7C83E0;
+    --sm-accent-dim: rgba(124, 131, 224, 0.18);
+    --sm-accent-warm: #E8834A;
+    --sm-accent-warm-dim: rgba(232, 131, 74, 0.18);
+    --sm-text-primary: #F0EFE9;
+    --sm-text-secondary: #8B92B8;
+    --sm-text-muted: #5A607A;
+    --sm-divider: rgba(255, 255, 255, 0.05);
+    --sm-green: #5A9E7A;
+    --sm-green-dim: rgba(90, 158, 122, 0.18);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ─────────────────────────────────────────────
+   ROOT CONTAINER
+───────────────────────────────────────────── */
+.sm-root {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--sm-bg);
+    color: var(--sm-text-primary);
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ─────────────────────────────────────────────
+   ENTRY SCREEN
+───────────────────────────────────────────── */
+.sm-entry {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+    padding: 48px 32px;
+}
+
+.sm-entry-wordmark {
+    font-family: 'DM Serif Display', serif;
+    font-size: 52px;
+    color: var(--sm-accent);
+    letter-spacing: -1px;
+    line-height: 1;
+}
+
+.sm-entry-tagline {
+    font-size: 16px;
+    color: var(--sm-text-primary);
+    font-weight: 400;
+    line-height: 1.6;
+    margin-top: 4px;
+}
+
+.sm-entry-punjabi {
+    font-size: 22px;
+    color: var(--sm-accent);
+    font-weight: 500;
+    line-height: 1.5;
+    display: block;
+    margin-top: 2px;
+}
+
+.sm-enter-btn {
+    margin-top: 28px;
+    background: var(--sm-surface);
+    color: var(--sm-text-primary);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 14px 36px;
+    border-radius: 14px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+    letter-spacing: 0.2px;
+}
+
+.sm-enter-btn:hover {
+    background: var(--sm-surface-hover);
+}
+
+.sm-enter-btn:active {
+    transform: scale(0.97);
+}
+
+/* ─────────────────────────────────────────────
+   MAIN INTERFACE WRAPPER
+───────────────────────────────────────────── */
+.sm-interface {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 24px 40px;
+    position: relative;
+}
+
+/* Entry screen — exit link */
+.sm-entry-exit {
+    margin-top: 16px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    color: var(--sm-text-muted);
+    letter-spacing: 0.2px;
+    padding: 6px 0;
+    transition: color 0.2s;
+}
+
+.sm-entry-exit:hover {
+    color: var(--sm-text-secondary);
+}
+
+/* In-session Leave button — top-right corner, always visible */
+.sm-leave-btn {
+    position: fixed;
+    top: 20px;
+    left: 28px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+    color: var(--sm-text-secondary);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 7px 16px 7px 12px;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s, color 0.2s;
+    z-index: 100;
+    backdrop-filter: blur(4px);
+}
+
+.sm-leave-btn:hover {
+    background: rgba(255, 255, 255, 0.14);
+    border-color: rgba(255, 255, 255, 0.24);
+    color: var(--sm-text-primary);
+}
+
+/* ─────────────────────────────────────────────
+   SEGMENTED CONTROL
+───────────────────────────────────────────── */
+.sm-tabs {
+    display: flex;
+    background: var(--sm-surface);
+    border-radius: 14px;
+    padding: 4px;
+    gap: 2px;
+    width: 240px;
+    margin-top: 12px;
+    flex-shrink: 0;
+}
+
+.sm-tab {
+    flex: 1;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--sm-text-muted);
+    padding: 9px 0;
+    border-radius: 11px;
+    transition: background 0.35s ease, color 0.35s ease;
+    text-align: center;
+}
+
+.sm-tab.active {
+    background: var(--sm-accent);
+    color: #FFFFFF;
+}
+
+.sm-context-line {
+    font-size: 11px;
+    color: var(--sm-text-muted);
+    margin-top: 10px;
+    letter-spacing: 0.3px;
+}
+
+/* ─────────────────────────────────────────────
+   CONTENT COLUMN (max 600px)
+───────────────────────────────────────────── */
+.sm-content {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 36px;
+    flex: 1;
+}
+
+/* ─────────────────────────────────────────────
+   FLASHCARD — DECK OVERVIEW
+───────────────────────────────────────────── */
+.sm-deck-name {
+    font-size: 13px;
+    color: var(--sm-text-secondary);
+    margin-bottom: 28px;
+    letter-spacing: 0.2px;
+}
+
+.sm-card-stack {
+    position: relative;
+    width: 340px;
+    height: 220px;
+    margin-bottom: 36px;
+}
+
+.sm-stack-ghost {
+    position: absolute;
+    background: var(--sm-surface);
+    border-radius: 20px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4);
+}
+
+.sm-stack-ghost-1 {
+    width: 330px;
+    height: 210px;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-3deg);
+    opacity: 0.4;
+}
+
+.sm-stack-ghost-2 {
+    width: 335px;
+    height: 215px;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-1.5deg);
+    opacity: 0.6;
+}
+
+.sm-begin-btn {
+    background: none;
+    border: 2px solid var(--sm-accent);
+    color: var(--sm-accent);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 12px 48px;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.sm-begin-btn:hover {
+    background: var(--sm-accent);
+    color: #FFFFFF;
+}
+
+/* ─────────────────────────────────────────────
+   FLASHCARD — FLIP CARD
+───────────────────────────────────────────── */
+.sm-flip-scene {
+    width: 340px;
+    height: 220px;
+    perspective: 1200px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.sm-flip-card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 350ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sm-flip-card.flipped {
+    transform: rotateY(180deg);
+}
+
+.sm-card-face {
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    padding: 28px 24px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.4);
+}
+
+.sm-card-front {
+    background: var(--sm-surface);
+}
+
+.sm-card-back {
+    background: var(--sm-surface-flip);
+    transform: rotateY(180deg);
+    justify-content: flex-start;
+    padding-top: 24px;
+}
+
+/* Card content — front */
+.sm-card-word {
+    font-size: 42px;
+    color: var(--sm-text-primary);
+    font-weight: 500;
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.sm-card-roman {
+    font-size: 14px;
+    color: var(--sm-text-muted);
+    letter-spacing: 0.3px;
+}
+
+.sm-card-footer {
+    position: absolute;
+    bottom: 16px;
+    left: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.sm-card-tap-hint {
+    font-size: 11px;
+    color: var(--sm-text-muted);
+    font-style: italic;
+}
+
+.sm-speaker {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--sm-accent);
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    border-radius: 6px;
+}
+
+.sm-speaker:hover {
+    opacity: 1;
+}
+
+.sm-speaker.playing {
+    animation: speakerPulse 0.6s ease;
+}
+
+@keyframes speakerPulse {
+    0% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+
+    50% {
+        transform: scale(1.25);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+}
+
+/* Card content — back */
+.sm-back-meaning {
+    font-size: 22px;
+    color: var(--sm-text-primary);
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.sm-back-script {
+    font-size: 36px;
+    color: var(--sm-text-primary);
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.sm-back-cultural {
+    font-size: 11px;
+    color: var(--sm-text-secondary);
+    font-style: italic;
+    text-align: center;
+    line-height: 1.6;
+    padding: 0 4px;
+}
+
+/* ─────────────────────────────────────────────
+   FLASHCARD — NAVIGATION
+───────────────────────────────────────────── */
+.sm-card-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 340px;
+    margin-top: 24px;
+}
+
+.sm-see-again {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--sm-text-muted);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.sm-see-again:hover {
+    color: var(--sm-text-secondary);
+}
+
+.sm-next-btn {
+    background: var(--sm-accent);
+    color: #FFFFFF;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 28px;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.sm-next-btn:hover {
+    opacity: 0.85;
+}
+
+/* ─────────────────────────────────────────────
+   PROGRESS THREAD
+───────────────────────────────────────────── */
+.sm-progress-area {
+    width: 340px;
+    margin-top: 32px;
+}
+
+.sm-progress-track {
+    height: 2px;
+    background: var(--sm-surface);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.sm-progress-fill {
+    height: 100%;
+    background: var(--sm-accent);
+    border-radius: 2px;
+    transition: width 0.5s ease;
+}
+
+.sm-progress-label {
+    font-size: 10px;
+    color: var(--sm-text-muted);
+    margin-top: 8px;
+    text-align: center;
+}
+
+/* ─────────────────────────────────────────────
+   FLASHCARD — SESSION DONE
+───────────────────────────────────────────── */
+.sm-done-message {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.sm-done-punjabi {
+    font-size: 40px;
+    color: var(--sm-accent);
+    display: block;
+    margin-bottom: 8px;
+}
+
+.sm-done-sub {
+    font-size: 13px;
+    color: var(--sm-text-muted);
+}
+
+.sm-done-cards {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 36px;
+}
+
+.sm-done-card-mini {
+    width: 52px;
+    height: 34px;
+    background: var(--sm-surface);
+    border-radius: 8px;
+    opacity: 0.7;
+    transform: rotateZ(-2deg);
+}
+
+.sm-done-card-mini:nth-child(2) {
+    transform: rotateZ(1deg);
+    opacity: 0.85;
+}
+
+.sm-done-card-mini:nth-child(3) {
+    transform: rotateZ(-1deg);
+    opacity: 1;
+}
+
+.sm-ghost-btns {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.sm-ghost-btn {
+    background: none;
+    border: 1.5px solid var(--sm-text-muted);
+    color: var(--sm-text-secondary);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 10px 24px;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+}
+
+.sm-ghost-btn:hover {
+    border-color: var(--sm-accent);
+    color: var(--sm-accent);
+}
+
+/* ─────────────────────────────────────────────
+   QUIZ — OVERVIEW CARD
+───────────────────────────────────────────── */
+.sm-quiz-overview-card {
+    background: var(--sm-surface);
+    border-radius: 20px;
+    padding: 32px 28px;
+    width: 100%;
+    max-width: 440px;
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.3);
+}
+
+.sm-overview-lang {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+.sm-overview-langname {
+    font-family: 'DM Serif Display', serif;
+    font-size: 30px;
+    color: var(--sm-text-primary);
+}
+
+.sm-overview-script {
+    font-size: 20px;
+    color: var(--sm-accent);
+}
+
+.sm-overview-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--sm-divider);
+}
+
+.sm-overview-row:last-of-type {
+    border-bottom: none;
+}
+
+.sm-overview-key {
+    font-size: 12px;
+    color: var(--sm-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.sm-pill {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 14px;
+    border-radius: 20px;
+}
+
+.sm-pill.indigo {
+    background: var(--sm-accent-dim);
+    color: var(--sm-accent);
+}
+
+.sm-pill.green {
+    background: var(--sm-green-dim);
+    color: var(--sm-green);
+}
+
+.sm-pill.warm {
+    background: var(--sm-accent-warm-dim);
+    color: var(--sm-accent-warm);
+}
+
+.sm-pill.muted {
+    background: rgba(90, 96, 122, 0.2);
+    color: var(--sm-text-secondary);
+}
+
+.sm-focus-pills {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.sm-no-judge {
+    font-size: 13px;
+    color: var(--sm-text-secondary);
+    text-align: center;
+    margin: 24px 0 28px;
+    line-height: 1.6;
+}
+
+.sm-no-judge strong {
+    color: var(--sm-accent-warm);
+    font-weight: 600;
+}
+
+.sm-begin-quiz-btn {
+    display: block;
+    width: 100%;
+    background: var(--sm-accent);
+    color: #FFFFFF;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 14px;
+    border-radius: 14px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    transition: opacity 0.2s;
+}
+
+.sm-begin-quiz-btn:hover {
+    opacity: 0.88;
+}
+
+/* ─────────────────────────────────────────────
+   QUIZ — QUESTION LAYOUT
+───────────────────────────────────────────── */
+.sm-q-progress-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 6px;
+}
+
+.sm-q-count {
+    font-size: 12px;
+    color: var(--sm-text-muted);
+}
+
+.sm-q-encourage {
+    font-size: 11px;
+    color: var(--sm-text-muted);
+    font-style: italic;
+}
+
+.sm-q-progress-track {
+    height: 2px;
+    background: var(--sm-surface);
+    border-radius: 2px;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 28px;
+}
+
+.sm-q-progress-fill {
+    height: 100%;
+    background: var(--sm-accent);
+    border-radius: 2px;
+    transition: width 0.5s ease;
+}
+
+.sm-q-card {
+    background: var(--sm-surface);
+    border-radius: 20px;
+    padding: 32px 28px;
+    width: 100%;
+    max-width: 520px;
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.3);
+}
+
+/* Listening MCQ */
+.sm-listen-hint {
+    font-size: 12px;
+    color: var(--sm-text-muted);
+    text-align: center;
+    margin-bottom: 14px;
+}
+
+.sm-audio-circle {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: var(--sm-accent-dim);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 0 auto 12px;
+    border: none;
+    transition: background 0.2s;
+    animation: audioBreathe 2.5s ease-in-out infinite;
+}
+
+.sm-audio-circle:hover {
+    background: rgba(124, 131, 224, 0.3);
+}
+
+.sm-audio-circle.playing {
+    background: var(--sm-accent);
+    animation: audioPlaying 0.4s ease infinite alternate;
+}
+
+@keyframes audioBreathe {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 transparent;
+    }
+
+    50% {
+        box-shadow: 0 0 0 8px rgba(124, 131, 224, 0.1);
+    }
+}
+
+@keyframes audioPlaying {
+    0% {
+        box-shadow: 0 0 0 4px rgba(124, 131, 224, 0.3);
+    }
+
+    100% {
+        box-shadow: 0 0 0 10px rgba(124, 131, 224, 0.15);
+    }
+}
+
+.sm-listen-sub {
+    font-size: 11px;
+    color: var(--sm-text-muted);
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.sm-q-divider {
+    height: 1px;
+    background: var(--sm-divider);
+    margin-bottom: 20px;
+}
+
+.sm-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 4px;
+}
+
+.sm-option {
+    background: var(--sm-surface-hover);
+    border: 1.5px solid transparent;
+    color: var(--sm-text-primary);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    padding: 14px 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    text-align: left;
+    transition: background 0.2s, border-color 0.2s, opacity 0.2s;
+}
+
+.sm-option:hover {
+    border-color: var(--sm-text-muted);
+}
+
+.sm-option.selected {
+    background: var(--sm-accent-dim);
+    border-color: var(--sm-accent);
+    color: var(--sm-text-primary);
+}
+
+.sm-option.dimmed {
+    opacity: 0.4;
+}
+
+/* Speaking question */
+.sm-speak-sentence {
+    font-size: 18px;
+    color: var(--sm-text-primary);
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sm-hint-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 28px;
+}
+
+.sm-hint-chip {
+    font-size: 11px;
+    color: var(--sm-text-secondary);
+    background: var(--sm-surface-hover);
+    padding: 5px 14px;
+    border-radius: 20px;
+}
+
+.sm-mic-circle {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: var(--sm-surface-hover);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 0 auto 16px;
+    border: none;
+    transition: background 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.sm-mic-circle.recording {
+    background: var(--sm-accent);
+}
+
+.sm-waveform {
+    display: flex;
+    gap: 2px;
+    align-items: center;
+    height: 20px;
+}
+
+.sm-wave-bar {
+    width: 3px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 2px;
+    animation: waveAnim 0.6s ease-in-out infinite alternate;
+}
+
+.sm-wave-bar:nth-child(1) {
+    height: 6px;
+    animation-delay: 0s;
+}
+
+.sm-wave-bar:nth-child(2) {
+    height: 14px;
+    animation-delay: 0.1s;
+}
+
+.sm-wave-bar:nth-child(3) {
+    height: 10px;
+    animation-delay: 0.2s;
+}
+
+.sm-wave-bar:nth-child(4) {
+    height: 18px;
+    animation-delay: 0.05s;
+}
+
+.sm-wave-bar:nth-child(5) {
+    height: 8px;
+    animation-delay: 0.15s;
+}
+
+@keyframes waveAnim {
+    from {
+        transform: scaleY(0.4);
+    }
+
+    to {
+        transform: scaleY(1);
+    }
+}
+
+.sm-transcription {
+    font-size: 12px;
+    color: var(--sm-text-secondary);
+    font-style: italic;
+    text-align: center;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    min-height: 18px;
+}
+
+.sm-show-answer-link {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    color: var(--sm-accent);
+    text-decoration: underline;
+    opacity: 0.75;
+    margin: 0 auto 16px;
+    display: block;
+    transition: opacity 0.2s;
+}
+
+.sm-show-answer-link:hover {
+    opacity: 1;
+}
+
+.sm-revealed-answer {
+    font-size: 13px;
+    color: var(--sm-green);
+    text-align: center;
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.sm-q-next-btn {
+    display: block;
+    width: 100%;
+    background: var(--sm-accent);
+    color: #FFFFFF;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 13px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    text-align: center;
+    transition: opacity 0.2s;
+}
+
+.sm-q-next-btn:hover {
+    opacity: 0.88;
+}
+
+/* ─────────────────────────────────────────────
+   BETWEEN QUESTIONS — TRANSITION OVERLAY
+───────────────────────────────────────────── */
+.sm-between {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-align: center;
+    flex: 1;
+}
+
+.sm-between-punjabi {
+    font-size: 36px;
+    color: var(--sm-accent);
+    font-weight: 500;
+}
+
+.sm-between-english {
+    font-size: 14px;
+    color: var(--sm-text-secondary);
+}
+
+/* ─────────────────────────────────────────────
+   SUMMARY SCREEN
+───────────────────────────────────────────── */
+.sm-summary {
+    width: 100%;
+    max-width: 480px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.sm-summary-complete-punjabi {
+    font-family: 'DM Serif Display', serif;
+    font-size: 42px;
+    color: var(--sm-text-primary);
+    text-align: center;
+}
+
+.sm-summary-complete-sub {
+    font-size: 13px;
+    color: var(--sm-text-muted);
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.sm-summary-card {
+    background: var(--sm-surface);
+    border-radius: 20px;
+    padding: 28px 24px;
+    width: 100%;
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.3);
+    margin-bottom: 24px;
+}
+
+.sm-summary-section {
+    margin-bottom: 24px;
+}
+
+.sm-summary-section:last-child {
+    margin-bottom: 0;
+}
+
+.sm-summary-label {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--sm-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.sm-summary-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.sm-summary-count {
+    font-size: 13px;
+    color: var(--sm-text-secondary);
+    margin-top: 4px;
+}
+
+.sm-summary-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+/* ─────────────────────────────────────────────
+   QUIZ — REAL ANSWER FEEDBACK
+───────────────────────────────────────────── */
+.sm-option.correct {
+    background: rgba(90, 206, 138, 0.15);
+    border-color: #5ACE8A;
+    color: #5ACE8A;
+}
+
+.sm-option.wrong {
+    background: rgba(229, 115, 115, 0.12);
+    border-color: #E57373;
+    color: #E57373;
+}
+
+.sm-mic-circle.done {
+    background: var(--sm-accent);
+}
+
+/* ─────────────────────────────────────────────
+   SPINNER (generating / evaluating)
+───────────────────────────────────────────── */
+@keyframes sm-spin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}

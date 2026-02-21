@@ -1,0 +1,44 @@
+{
+  "id": "chat_1771638808700_t9vs00x0f",
+  "language": "Punjabi",
+  "created_at": "2026-02-21T01:53:28.702Z",
+  "updated_at": "2026-02-21T01:53:33.106Z",
+  "fluency_scores": [
+    85
+  ],
+  "avg_fluency": 85,
+  "topics_covered": [
+    "greetings",
+    "respect"
+  ],
+  "vocabulary_used": [
+    {
+      "word": "ਜੀ",
+      "meaning": "respectful honorific",
+      "count": 1
+    },
+    {
+      "word": "ਸਮਾਜਿਕ ਸਨਮਾਨ",
+      "meaning": "social respect",
+      "count": 1
+    },
+    {
+      "word": "ਵੱਡਿਆਂ",
+      "meaning": "elders",
+      "count": 1
+    }
+  ],
+  "messages": [
+    {
+      "role": "user",
+      "content": "How do I greet an elder?",
+      "timestamp": "2026-02-21T01:53:33.106Z",
+      "fluency": 85
+    },
+    {
+      "role": "assistant",
+      "content": "ਵੱਡਿਆਂ ਨੂੰ ਸਲਾਮ ਕਰਨ ਲਈ ਕਹੋ: \"ਸਤ ਸ੍ਰੀ ਅਕਾਲ ਜੀ\" ਜਾਂ \"ਨਮਸਤੇ ਜੀ\" — ਇਹ ਸਮਾਜਿਕ ਸਨਮਾਨ ਦਰਸਾਉਂਦਾ ਹੈ।  \n(To greet elders, say: \"Sat Sri Akal Ji\" or \"Namaste Ji\"—this shows social respect.)\n\n**ਜੀ** (Ji) — a respectful honorific added after names or greetings  \n**ਸਮਾਜਿਕ ਸਨਮਾਨ** (samaajik sanmaan) — social respect  \n**ਵੱਡਿਆਂ** (vaddiā̃) — elders",
+      "timestamp": "2026-02-21T01:53:33.106Z"
+    }
+  ]
+}

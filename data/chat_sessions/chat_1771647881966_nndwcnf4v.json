@@ -1,0 +1,64 @@
+{
+  "id": "chat_1771647881966_nndwcnf4v",
+  "language": "Punjabi",
+  "created_at": "2026-02-21T04:24:41.967Z",
+  "updated_at": "2026-02-21T04:25:21.468Z",
+  "fluency_scores": [
+    85
+  ],
+  "avg_fluency": 85,
+  "topics_covered": [
+    "market vocabulary"
+  ],
+  "vocabulary_used": [
+    {
+      "word": "ਚੰਗਾ ਮਾਲ",
+      "meaning": "good goods",
+      "count": 1
+    },
+    {
+      "word": "ਭਾਅ",
+      "meaning": "price",
+      "count": 1
+    },
+    {
+      "word": "ਬਾਰਗੈਨ ਕਰਨਾ",
+      "meaning": "to bargain",
+      "count": 1
+    },
+    {
+      "word": "ਬੈਗ",
+      "meaning": "bag",
+      "count": 1
+    },
+    {
+      "word": "ਨਕਦ",
+      "meaning": "cash",
+      "count": 1
+    }
+  ],
+  "messages": [
+    {
+      "role": "user",
+      "content": "Teach me 5 market words",
+      "timestamp": "2026-02-21T04:24:45.457Z",
+      "fluency": 85
+    },
+    {
+      "role": "assistant",
+      "content": "ਚੰਗਾ ਮਾਲ (changa maal) — good goods, ਭਾਅ (bhaa) — price, ਬਾਰਗੈਨ ਕਰਨਾ (baargain karna) — to bargain, ਬੈਗ (baeg) — bag, ਨਕਦ (nakad) — cash  \n(These are super useful at any market in Punjab!)",
+      "timestamp": "2026-02-21T04:24:45.458Z"
+    },
+    {
+      "role": "user",
+      "content": "some funny words in punjabi .",
+      "timestamp": "2026-02-21T04:25:21.468Z",
+      "fluency": 0
+    },
+    {
+      "role": "assistant",
+      "content": "ਚੱਕੂ (chakku) — \"knife\" but also used like \"dude!\" when you're shocked,  \nਫੁੱਲਾ (phullā) — literally \"flower,\" but if someone’s acting silly, you say \"ਓਹੋ ਫੁੱਲਾ ਬਣ ਗਿਆ!\" (\"Oh, you turned into a flower!\" = you're being ridiculous 😄),  \nਗੱਡੀ (gaddī) — \"car,\" but if someone’s slow, you say \"ਤੂੰ ਤਾਂ ਗੱਡੀ ਵੱਟ ਰਿਹਾ ਏ!\" (\"You’re dragging like a cart!\")  \n\n**Funny bonus**: ਬੱਕਰੀ (bakkarī) = goat… but if someone’s stubborn, you say \"ਤੂੰ ਬੱਕਰੀ ਏ!\" (\"You’re a goat!\" = you won’t listen!)",
+      "timestamp": "2026-02-21T04:25:21.468Z"
+    }
+  ]
+}

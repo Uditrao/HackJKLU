@@ -1,0 +1,269 @@
+{
+  "quizId": "quiz_1771651995653_l5yudm",
+  "language": "Punjabi",
+  "level": 3,
+  "difficulty": "intermediate",
+  "num_questions": 6,
+  "questions": [
+    {
+      "id": 0,
+      "type": "listening_mcq",
+      "word": "ਸਤ ਸ੍ਰੀ ਅਕਾਲ",
+      "word_romanized": "sat srī akāl",
+      "correct_answer": "Hello (traditional Sikh greeting)",
+      "options": [
+        "Goodbye",
+        "Thank you",
+        "Hello (traditional Sikh greeting)",
+        "How are you?"
+      ],
+      "audio_text": "ਸਤ ਸ੍ਰੀ ਅਕਾਲ"
+    },
+    {
+      "id": 1,
+      "type": "speaking",
+      "sentence_en": "Please give me hot coffee in a mug",
+      "expected_answer": "ਕਿਰਪਾ ਕਰਕੇ ਮੁੱਗ ਵਿੱਚ ਗਰਮ ਕਾਫੀ ਦੇ ਦਿਓ",
+      "expected_answer_romanized": "kirpā karke muġ vich garam kāphī de dio",
+      "acceptable_variations": [
+        "ਕਿਰਪਾ ਕਰਕੇ ਮੁੱਗ ਵਿੱਚ ਗਰਮ ਕਾਫੀ ਦੇ ਦਿਓ",
+        "ਮੁੱਗ ਵਿੱਚ ਗਰਮ ਕਾਫੀ ਦੇ ਦਿਓ",
+        "ਕਿਰਪਾ ਕਰਕੇ ਮੁੱਗ ਵਿੱਚ ਗਰਮ ਕਾਫੀ ਦਿਓ"
+      ],
+      "hint_words": [
+        {
+          "word": "ਗਰਮ",
+          "meaning": "hot"
+        },
+        {
+          "word": "ਕਾਫੀ",
+          "meaning": "coffee"
+        },
+        {
+          "word": "ਮੱਗ",
+          "meaning": "mug"
+        }
+      ],
+      "audio_text": "Please give me hot coffee in a mug"
+    },
+    {
+      "id": 2,
+      "type": "listening_mcq",
+      "word": "ਤੁਸੀਂ",
+      "word_romanized": "tusīṁ",
+      "correct_answer": "you (formal)",
+      "options": [
+        "I",
+        "we",
+        "you (formal)",
+        "they"
+      ],
+      "audio_text": "ਤੁਸੀਂ"
+    },
+    {
+      "id": 3,
+      "type": "speaking",
+      "sentence_en": "How are you, sir? I want hot tea.",
+      "expected_answer": "ਤੁਸੀਂ ਕਿਵੇਂ ਹੋ? ਮੈਂ ਗਰਮ ਚਾਹ ਚਾਹੁੰਦਾ ਹਾਂ",
+      "expected_answer_romanized": "tusīṁ kiveṁ hō? maiṁ garam cāh cāhundā hāṁ",
+      "acceptable_variations": [
+        "ਤੁਸੀਂ ਕਿਵੇਂ ਹੋ? ਮੈਂ ਗਰਮ ਚਾਹ ਚਾਹੁੰਦਾ ਹਾਂ",
+        "ਕਿਵੇਂ ਹੋ ਤੁਸੀਂ? ਮੈਂ ਗਰਮ ਚਾਹ ਚਾਹੁੰਦਾ ਹਾਂ",
+        "ਤੁਸੀਂ ਕਿਵੇਂ ਹੋ? ਮੈਂ ਗਰਮ ਚਾਹ ਚਾਹੁੰਦਾ ਹਾਂ"
+      ],
+      "hint_words": [
+        {
+          "word": "ਕਿਵੇਂ",
+          "meaning": "how"
+        },
+        {
+          "word": "ਹੋ",
+          "meaning": "are"
+        },
+        {
+          "word": "ਚਾਹੁੰਦਾ",
+          "meaning": "want (masculine)"
+        }
+      ],
+      "audio_text": "How are you, sir? I want hot tea."
+    },
+    {
+      "id": 4,
+      "type": "listening_mcq",
+      "word": "ਚਾਹ",
+      "word_romanized": "cāh",
+      "correct_answer": "tea",
+      "options": [
+        "coffee",
+        "mug",
+        "tea",
+        "friend"
+      ],
+      "audio_text": "ਚਾਹ"
+    },
+    {
+      "id": 5,
+      "type": "speaking",
+      "sentence_en": "Hello, my friend. Can you give me hot tea?",
+      "expected_answer": "ਸਤ ਸ੍ਰੀ ਅਕਾਲ, ਮੇਰਾ ਦੋਸਤ। ਕੀ ਤੁਸੀਂ ਮੁੱਗ ਵਿੱਚ ਗਰਮ ਚਾਹ ਦੇ ਸਕਦੇ ਹੋ?",
+      "expected_answer_romanized": "sat srī akāl, mērā dōsata. kī tusīṁ muġ vich garam cāh dē sakdē hō?",
+      "acceptable_variations": [
+        "ਸਤ ਸ੍ਰੀ ਅਕਾਲ, ਮੇਰਾ ਦੋਸਤ। ਕੀ ਤੁਸੀਂ ਮੁੱਗ ਵਿੱਚ ਗਰਮ ਚਾਹ ਦੇ ਸਕਦੇ ਹੋ?",
+        "ਸਤ ਸ੍ਰੀ ਅਕਾਲ, ਦੋਸਤ। ਕੀ ਤੁਸੀਂ ਗਰਮ ਚਾਹ ਦੇ ਸਕਦੇ ਹੋ?",
+        "ਸਤ ਸ੍ਰੀ ਅਕਾਲ, ਮੇਰਾ ਦੋਸਤ। ਮੈਨੂੰ ਗਰਮ ਚਾਹ ਚਾਹੀਏ"
+      ],
+      "hint_words": [
+        {
+          "word": "ਸਤ ਸ੍ਰੀ ਅਕਾਲ",
+          "meaning": "Hello (traditional Sikh greeting)"
+        },
+        {
+          "word": "ਦੁਸਤ",
+          "meaning": "friend"
+        },
+        {
+          "word": "ਚਾਹ",
+          "meaning": "tea"
+        }
+      ],
+      "audio_text": "Hello, my friend. Can you give me hot tea?"
+    }
+  ],
+  "quiz_metadata": {
+    "theme": "Greetings and Daily Requests",
+    "focus_area": "listening comprehension and spoken translation",
+    "estimated_difficulty": "medium"
+  },
+  "learner_snapshot": {
+    "xp": 476,
+    "level": 3,
+    "vocab_count": 68,
+    "avg_fluency": 82
+  },
+  "status": "completed",
+  "results": {
+    "question_results": [
+      {
+        "questionId": 0,
+        "type": "listening_mcq",
+        "word": "ਸਤ ਸ੍ਰੀ ਅਕਾਲ",
+        "word_romanized": "sat srī akāl",
+        "user_answer": "Hello (traditional Sikh greeting)",
+        "correct_answer": "Hello (traditional Sikh greeting)",
+        "options": [
+          "Goodbye",
+          "Thank you",
+          "Hello (traditional Sikh greeting)",
+          "How are you?"
+        ],
+        "correct": true,
+        "score": 100,
+        "feedback": "✅ Correct! Great listening skills."
+      },
+      {
+        "questionId": 1,
+        "type": "speaking",
+        "sentence_en": "Please give me hot coffee in a mug",
+        "user_answer": "ਕਾਫੀ ਹੋਟ",
+        "expected_answer": "ਕਿਰਪਾ ਕਰਕੇ ਮੁੱਗ ਵਿੱਚ ਗਰਮ ਕਾਫੀ ਦੇ ਦਿਓ",
+        "corrected_answer": "ਕਿਰਪਾ ਕਰਕੇ ਮੁੱਗ ਵਿੱਚ ਗਰਮ ਕਾਫੀ ਦੇ ਦਿਓ",
+        "pronunciation_tip": "Pronounce 'kirpā karke' with a soft 'r' and stress 'garam kāphī' clearly — the 'gh' in 'muġ' is a guttural sound, like clearing your throat slightly.",
+        "correct": false,
+        "score": 20,
+        "feedback": "Your answer 'ਕਾਫੀ ਹੋਟ' only includes two words and misses the key request ('please give me') and the container ('in a mug'). The meaning is incomplete and unclear. Try including the full phrase like 'kirpā karke muġ vich garam kāphī de dio'."
+      },
+      {
+        "questionId": 2,
+        "type": "listening_mcq",
+        "word": "ਤੁਸੀਂ",
+        "word_romanized": "tusīṁ",
+        "user_answer": "you (formal)",
+        "correct_answer": "you (formal)",
+        "options": [
+          "I",
+          "we",
+          "you (formal)",
+          "they"
+        ],
+        "correct": true,
+        "score": 100,
+        "feedback": "✅ Correct! Great listening skills."
+      },
+      {
+        "questionId": 3,
+        "type": "speaking",
+        "sentence_en": "How are you, sir? I want hot tea.",
+        "user_answer": "",
+        "expected_answer": "ਤੁਸੀਂ ਕਿਵੇਂ ਹੋ? ਮੈਂ ਗਰਮ ਚਾਹ ਚਾਹੁੰਦਾ ਹਾਂ",
+        "corrected_answer": "ਤੁਸੀਂ ਕਿਵੇਂ ਹੋ? ਮੈਂ ਗਰਮ ਚਾਹ ਚਾਹੁੰਦਾ ਹਾਂ",
+        "pronunciation_tip": "Start with 'tusīṁ kiveṁ hō?' — say 'tus-ee-m' and 'kee-vem ho' slowly. The 'hō' ends with a soft breath.",
+        "correct": false,
+        "score": 10,
+        "feedback": "Your answer is empty. Please try speaking the full sentence: 'tusīṁ kiveṁ hō? maiṁ garam cāh cāhundā hāṁ'. Even if you're unsure, try saying something — you're doing great by practicing!"
+      },
+      {
+        "questionId": 4,
+        "type": "listening_mcq",
+        "word": "ਚਾਹ",
+        "word_romanized": "cāh",
+        "user_answer": "mug",
+        "correct_answer": "tea",
+        "options": [
+          "coffee",
+          "mug",
+          "tea",
+          "friend"
+        ],
+        "correct": false,
+        "score": 0,
+        "feedback": "❌ Incorrect. \"ਚਾਹ\" means \"tea\"."
+      },
+      {
+        "questionId": 5,
+        "type": "speaking",
+        "sentence_en": "Hello, my friend. Can you give me hot tea?",
+        "user_answer": "",
+        "expected_answer": "ਸਤ ਸ੍ਰੀ ਅਕਾਲ, ਮੇਰਾ ਦੋਸਤ। ਕੀ ਤੁਸੀਂ ਮੁੱਗ ਵਿੱਚ ਗਰਮ ਚਾਹ ਦੇ ਸਕਦੇ ਹੋ?",
+        "corrected_answer": "ਸਤ ਸ੍ਰੀ ਅਕਾਲ, ਮੇਰਾ ਦੋਸਤ। ਕੀ ਤੁਸੀਂ ਮੁੱਗ ਵਿੱਚ ਗਰਮ ਚਾਹ ਦੇ ਸਕਦੇ ਹੋ?",
+        "pronunciation_tip": "Say 'sat srī akāl' with a bright, cheerful tone. 'Dē sakdē hō' means 'can you give?' — practice saying 'dē' like 'day' and 'sakdē' like 'suk-day'.",
+        "correct": false,
+        "score": 10,
+        "feedback": "Your answer is empty. Remember, you can say: 'sat srī akāl, mērā dōsata. kī tusīṁ garam cāh dē sakdē hō?' Even a partial attempt helps! Keep going — you're improving with every try."
+      }
+    ],
+    "total_score": 40,
+    "correct_count": 2,
+    "total_questions": 6,
+    "xp_earned": 12,
+    "leveled_up": false,
+    "graded_at": "2026-02-21T05:34:33.228Z"
+  },
+  "answers": [
+    {
+      "questionId": 0,
+      "answer": "Hello (traditional Sikh greeting)"
+    },
+    {
+      "questionId": 1,
+      "answer": "ਕਾਫੀ ਹੋਟ"
+    },
+    {
+      "questionId": 2,
+      "answer": "you (formal)"
+    },
+    {
+      "questionId": 3,
+      "answer": ""
+    },
+    {
+      "questionId": 4,
+      "answer": "mug"
+    },
+    {
+      "questionId": 5,
+      "answer": ""
+    }
+  ],
+  "created_at": "2026-02-21T05:33:15.653Z",
+  "completed_at": "2026-02-21T05:34:33.228Z"
+}

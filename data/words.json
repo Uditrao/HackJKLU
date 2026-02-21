@@ -47,6 +47,186 @@
     {
       "word": "ਹੋ",
       "meaning": "are"
+    },
+    {
+      "word": "ਚਾਹ",
+      "meaning": "tea"
+    },
+    {
+      "word": "ਪਿਆਂਦਾ",
+      "meaning": "drink"
+    },
+    {
+      "word": "ਹਾਂ",
+      "meaning": "am"
+    },
+    {
+      "word": "ਮਾਮੀ",
+      "meaning": "mummy (childlike word for mother)"
+    },
+    {
+      "word": "ਖੇਡ",
+      "meaning": "play"
+    },
+    {
+      "word": "ਰਹੀ",
+      "meaning": "is (feminine form)"
+    },
+    {
+      "word": "ਦੂਧ",
+      "meaning": "milk"
+    },
+    {
+      "word": "ਮੈਂ",
+      "meaning": "I"
+    },
+    {
+      "word": "ਤੁਹਾਡਾ",
+      "meaning": "your"
+    },
+    {
+      "word": "ਦੋਸਤ",
+      "meaning": "friend"
+    },
+    {
+      "word": "ਬਣਨਾ",
+      "meaning": "to become"
+    },
+    {
+      "word": "ਚਾਹਾਂਗਾ",
+      "meaning": "would like"
+    },
+    {
+      "word": "ਦੁਸਤ",
+      "meaning": "friend"
+    },
+    {
+      "word": "ਚਾਹੁੰਦਾ",
+      "meaning": "want (masculine)"
+    },
+    {
+      "word": "ਪੀਂਦਾ",
+      "meaning": "drink"
+    },
+    {
+      "word": "ਮੇਰਾ",
+      "meaning": "my"
+    },
+    {
+      "word": "ਟੇਡੀ",
+      "meaning": "teddy"
+    },
+    {
+      "word": "ਭਾਲੂ",
+      "meaning": "bear"
+    },
+    {
+      "word": "ਸਭ",
+      "meaning": "all"
+    },
+    {
+      "word": "ਤੋਂ",
+      "meaning": "than"
+    },
+    {
+      "word": "ਪਿਆਰਾ",
+      "meaning": "dear"
+    },
+    {
+      "word": "ਹੈ",
+      "meaning": "is"
+    },
+    {
+      "word": "ਮੰਮੀ",
+      "meaning": "mummy/mom"
+    },
+    {
+      "word": "ਦੁੱਧ",
+      "meaning": "milk"
+    },
+    {
+      "word": "ਮਮਾ",
+      "meaning": "mummy (affectionate term for mother)"
+    },
+    {
+      "word": "ਟੈਡੀ",
+      "meaning": "teddy bear (toy)"
+    },
+    {
+      "word": "ਚਾਹੀਏ",
+      "meaning": "I need / I want (polite/form of wanting)"
+    },
+    {
+      "word": "ਗਰਮੀ",
+      "meaning": "heat"
+    },
+    {
+      "word": "ਬਣੋਗੀ",
+      "meaning": "will become (feminine)"
+    },
+    {
+      "word": "ਕਿਆ",
+      "meaning": "what (incorrect form of 'ਕੀ')"
+    },
+    {
+      "word": "ਦਿਲ",
+      "meaning": "heart"
+    },
+    {
+      "word": "ਦੋਸਤੋ",
+      "meaning": "friends (vocative form)"
+    },
+    {
+      "word": "ਮੈਨੂੰ",
+      "meaning": "to me"
+    },
+    {
+      "word": "ਬਣੋ",
+      "meaning": "become"
+    },
+    {
+      "word": "ਪਲੀਜ਼",
+      "meaning": "please"
+    },
+    {
+      "word": "ਬਹੁਤ",
+      "meaning": "very"
+    },
+    {
+      "word": "ਪੀਣਾ",
+      "meaning": "to drink"
+    },
+    {
+      "word": "ਪਸੰਦ",
+      "meaning": "like"
+    },
+    {
+      "word": "ਬੱਚੇ",
+      "meaning": "baby"
+    },
+    {
+      "word": "ਪਿਲਾਓ",
+      "meaning": "feed"
+    },
+    {
+      "word": "ਹੋਣਾ",
+      "meaning": "to be"
+    },
+    {
+      "word": "ਚਾਹੀਦਾ",
+      "meaning": "should"
+    },
+    {
+      "word": "ਮਮੀ",
+      "meaning": "mummy/mom"
+    },
+    {
+      "word": "ਲੱਗ ਰਹੀ ਹੈ",
+      "meaning": "is feeling / is coming"
+    },
+    {
+      "word": "ਬੇਸਿਕ",
+      "meaning": "basic"
     }
   ],
   "user_used": [
@@ -54,19 +234,151 @@
       "word": "गरम",
       "meaning": "hot",
       "context": "मुझे गरम कॉफी का मग चाहिए",
-      "strength": 0.6
+      "strength": 0.7
     },
     {
       "word": "कॉफी",
       "meaning": "coffee",
       "context": "मुझे गरम कॉफी का मग चाहिए",
-      "strength": 0.6
+      "strength": 0.7
     },
     {
       "word": "मग",
       "meaning": "mug",
       "context": "मुझे गरम कॉफी का मग चाहिए",
+      "strength": 0.7
+    },
+    {
+      "word": "ਦੂਧ",
+      "meaning": "milk",
+      "context": "ਦੂਧ",
       "strength": 0.6
+    },
+    {
+      "word": "ਦੁਸਤ",
+      "meaning": "friend",
+      "context": "ਦੁਸਤ",
+      "strength": 0.5
+    },
+    {
+      "word": "ਦੋਸਤ",
+      "meaning": "friend",
+      "context": "ਪਲੀਜ਼ ਮੇਰਾ ਦੋਸਤ ਬਣੋ",
+      "strength": 0.7999999999999999
+    },
+    {
+      "word": "ਬਣਨਾ",
+      "meaning": "to become",
+      "context": "ਅਸੀਂ ਦੋਸਤ ਬਣੀਏ।",
+      "strength": 0.6
+    },
+    {
+      "word": "ਚਾਹੁੰਦਾ",
+      "meaning": "want (masculine)",
+      "context": "ਮੈਂ ਤੁਹਾਡਾ ਦੋਸਤ ਬਣਨਾ ਚਾਹੁੰਦਾ",
+      "strength": 0.5
+    },
+    {
+      "word": "ਮੰਮੀ",
+      "meaning": "mummy/mom",
+      "context": "ਮੰਮੀ ਮੈਨੂੰ ਗਰਮ ਦੁੱਧ ਪੀਂਦਾ ਹਾਂ",
+      "strength": 0.5
+    },
+    {
+      "word": "ਦੁੱਧ",
+      "meaning": "milk",
+      "context": "ਦੁੱਧ ਗਰਮ",
+      "strength": 0.6
+    },
+    {
+      "word": "ਗਰਮ",
+      "meaning": "hot/warm",
+      "context": "ਦੁੱਧ ਗਰਮ",
+      "strength": 0.6
+    },
+    {
+      "word": "ਮਮਾ",
+      "meaning": "mummy (affectionate term for mother)",
+      "context": "ਮਮਾ ਮੁੰਝੇ ਟੈਡੀ ਚਾਹੀਏ",
+      "strength": 0.5
+    },
+    {
+      "word": "ਟੈਡੀ",
+      "meaning": "teddy bear",
+      "context": "ਮੁਝੇ ਟੈਡੀ ਬਾਰ ਚਾਹੀਏ",
+      "strength": 0.6
+    },
+    {
+      "word": "ਚਾਹੀਏ",
+      "meaning": "I want / I need",
+      "context": "ਮੁਝੇ ਟੈਡੀ ਬਾਰ ਚਾਹੀਏ",
+      "strength": 0.6
+    },
+    {
+      "word": "ਗਰਮੀ",
+      "meaning": "heat",
+      "context": "ਮਮੀ ਕੋ ਬਤਾਨਾ ਹੈ ਕਿ ਗਰਮੀ ਲੱਗ ਰਹੀ ਹੈ",
+      "strength": 0.6
+    },
+    {
+      "word": "ਬਣੋਗੀ",
+      "meaning": "will become (feminine)",
+      "context": "ਕਿਆ ਤੁਮ ਮੇਰੀ ਦੋਸਤ ਬਣੋਗੀ",
+      "strength": 0.5
+    },
+    {
+      "word": "ਕਿਆ",
+      "meaning": "what (incorrect form of 'ਕੀ')",
+      "context": "ਕਿਆ ਤੁਮ ਮੇਰੀ ਦੋਸਤ ਬਣੋਗੀ",
+      "strength": 0.5
+    },
+    {
+      "word": "ਦਿਲ",
+      "meaning": "heart",
+      "context": "ਦਿਲ ਨਾਲ ਬਣੀਏ, ਸਿਰਫ਼ ਦਸਤ ਨਾਲ ਨਹੀਂ।",
+      "strength": 0.5
+    },
+    {
+      "word": "ਦੋਸਤੋ",
+      "meaning": "friends (vocative form)",
+      "context": "ਦੋਸਤੋ ਮੈਨੂੰ",
+      "strength": 0.5
+    },
+    {
+      "word": "ਮੈਨੂੰ",
+      "meaning": "to me",
+      "context": "ਦੋਸਤੋ ਮੈਨੂੰ",
+      "strength": 0.5
+    },
+    {
+      "word": "ਬਣੋ",
+      "meaning": "become",
+      "context": "ਪਲੀਜ਼ ਮੇਰਾ ਦੋਸਤ ਬਣੋ",
+      "strength": 0.5
+    },
+    {
+      "word": "ਪਲੀਜ਼",
+      "meaning": "please",
+      "context": "ਪਲੀਜ਼ ਮੇਰਾ ਦੋਸਤ ਬਣੋ",
+      "strength": 0.5
+    },
+    {
+      "word": "ਮਮੀ",
+      "meaning": "mummy/mom",
+      "context": "ਮਮੀ ਕੋ ਬਤਾਨਾ ਹੈ ਕਿ ਗਰਮੀ ਲੱਗ ਰਹੀ ਹੈ",
+      "strength": 0.5
+    },
+    {
+      "word": "ਲੱਗ ਰਹੀ ਹੈ",
+      "meaning": "is feeling / is coming",
+      "context": "ਮਮੀ ਕੋ ਬਤਾਨਾ ਹੈ ਕਿ ਗਰਮੀ ਲੱਗ ਰਹੀ ਹੈ",
+      "strength": 0.5
+    },
+    {
+      "word": "ਬੇਸਿਕ",
+      "meaning": "basic",
+      "context": "ਤੋਂ ਬੇਸਿਕ ਕੀ ਹੈ ਇਸਮੇਂ ਫੀਡਬੈਕ ਸਿਸਟਮ",
+      "strength": 0.5
     }
   ],
   "scene_used": [
@@ -78,11 +390,6 @@
     {
       "word": "कॉफ़ी",
       "meaning": "coffee",
-      "strength": 0
-    },
-    {
-      "word": "ਗਰਮ",
-      "meaning": "hot",
       "strength": 0
     },
     {
@@ -113,6 +420,126 @@
     {
       "word": "ਹੋ",
       "meaning": "are",
+      "strength": 0
+    },
+    {
+      "word": "ਚਾਹ",
+      "meaning": "tea",
+      "strength": 0
+    },
+    {
+      "word": "ਪਿਆਂਦਾ",
+      "meaning": "drink",
+      "strength": 0
+    },
+    {
+      "word": "ਹਾਂ",
+      "meaning": "am",
+      "strength": 0
+    },
+    {
+      "word": "ਮਾਮੀ",
+      "meaning": "mummy (childlike word for mother)",
+      "strength": 0
+    },
+    {
+      "word": "ਖੇਡ",
+      "meaning": "play",
+      "strength": 0
+    },
+    {
+      "word": "ਰਹੀ",
+      "meaning": "is (feminine form)",
+      "strength": 0
+    },
+    {
+      "word": "ਮੈਂ",
+      "meaning": "I",
+      "strength": 0
+    },
+    {
+      "word": "ਤੁਹਾਡਾ",
+      "meaning": "your",
+      "strength": 0
+    },
+    {
+      "word": "ਚਾਹਾਂਗਾ",
+      "meaning": "would like",
+      "strength": 0
+    },
+    {
+      "word": "ਪੀਂਦਾ",
+      "meaning": "drink",
+      "strength": 0
+    },
+    {
+      "word": "ਮੇਰਾ",
+      "meaning": "my",
+      "strength": 0
+    },
+    {
+      "word": "ਟੇਡੀ",
+      "meaning": "teddy",
+      "strength": 0
+    },
+    {
+      "word": "ਭਾਲੂ",
+      "meaning": "bear",
+      "strength": 0
+    },
+    {
+      "word": "ਸਭ",
+      "meaning": "all",
+      "strength": 0
+    },
+    {
+      "word": "ਤੋਂ",
+      "meaning": "than",
+      "strength": 0
+    },
+    {
+      "word": "ਪਿਆਰਾ",
+      "meaning": "dear",
+      "strength": 0
+    },
+    {
+      "word": "ਹੈ",
+      "meaning": "is",
+      "strength": 0
+    },
+    {
+      "word": "ਬਹੁਤ",
+      "meaning": "very",
+      "strength": 0
+    },
+    {
+      "word": "ਪੀਣਾ",
+      "meaning": "to drink",
+      "strength": 0
+    },
+    {
+      "word": "ਪਸੰਦ",
+      "meaning": "like",
+      "strength": 0
+    },
+    {
+      "word": "ਬੱਚੇ",
+      "meaning": "baby",
+      "strength": 0
+    },
+    {
+      "word": "ਪਿਲਾਓ",
+      "meaning": "feed",
+      "strength": 0
+    },
+    {
+      "word": "ਹੋਣਾ",
+      "meaning": "to be",
+      "strength": 0
+    },
+    {
+      "word": "ਚਾਹੀਦਾ",
+      "meaning": "should",
       "strength": 0
     }
   ]

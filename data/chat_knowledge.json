@@ -1,0 +1,154 @@
+{
+  "languages": {
+    "Hindi": {
+      "total_sessions": 2,
+      "total_messages": 4,
+      "avg_fluency": 50,
+      "fluency_trend": [
+        15,
+        85
+      ],
+      "strong_topics": [],
+      "weak_topics": [
+        "Introduction",
+        "Learning Goals",
+        "self-introduction",
+        "learning goals"
+      ],
+      "vocabulary_mastery": {
+        "शानदार": {
+          "meaning": "excellent",
+          "mastery": 0.08,
+          "uses": 1,
+          "first_seen": "2026-02-20T23:44:15.082Z",
+          "last_used": "2026-02-20T23:44:15.082Z"
+        },
+        "विषय": {
+          "meaning": "topic",
+          "mastery": 0.08,
+          "uses": 1,
+          "first_seen": "2026-02-20T23:44:15.082Z",
+          "last_used": "2026-02-20T23:44:15.082Z"
+        },
+        "rozana": {
+          "meaning": "daily",
+          "mastery": 0.08,
+          "uses": 1,
+          "first_seen": "2026-02-20T23:55:26.968Z",
+          "last_used": "2026-02-20T23:55:26.968Z"
+        },
+        "samajh": {
+          "meaning": "understanding",
+          "mastery": 0.08,
+          "uses": 1,
+          "first_seen": "2026-02-20T23:55:26.968Z",
+          "last_used": "2026-02-20T23:55:26.968Z"
+        },
+        "sahaj": {
+          "meaning": "easily",
+          "mastery": 0.08,
+          "uses": 1,
+          "first_seen": "2026-02-20T23:55:26.968Z",
+          "last_used": "2026-02-20T23:55:26.968Z"
+        }
+      }
+    },
+    "Punjabi": {
+      "total_sessions": 4,
+      "total_messages": 10,
+      "avg_fluency": 82,
+      "fluency_trend": [
+        85,
+        75,
+        85
+      ],
+      "strong_topics": [],
+      "weak_topics": [
+        "greetings",
+        "respect",
+        "introducing someone",
+        "market vocabulary"
+      ],
+      "vocabulary_mastery": {
+        "ਜੀ": {
+          "meaning": "respectful honorific",
+          "mastery": 0.08,
+          "uses": 1,
+          "first_seen": "2026-02-21T01:53:33.114Z",
+          "last_used": "2026-02-21T01:53:33.114Z"
+        },
+        "ਸਮਾਜਿਕ ਸਨਮਾਨ": {
+          "meaning": "social respect",
+          "mastery": 0.08,
+          "uses": 1,
+          "first_seen": "2026-02-21T01:53:33.114Z",
+          "last_used": "2026-02-21T01:53:33.114Z"
+        },
+        "ਵੱਡਿਆਂ": {
+          "meaning": "elders",
+          "mastery": 0.08,
+          "uses": 1,
+          "first_seen": "2026-02-21T01:53:33.114Z",
+          "last_used": "2026-02-21T01:53:33.114Z"
+        },
+        "ਵੀਰ": {
+          "meaning": "friend",
+          "mastery": 0.08,
+          "uses": 1,
+          "first_seen": "2026-02-21T01:54:12.598Z",
+          "last_used": "2026-02-21T01:54:12.599Z"
+        },
+        "ਸੋਨੀਆ": {
+          "meaning": "Soniya (name)",
+          "mastery": 0.08,
+          "uses": 1,
+          "first_seen": "2026-02-21T01:54:12.599Z",
+          "last_used": "2026-02-21T01:54:12.599Z"
+        },
+        "ਨਾਮ": {
+          "meaning": "name",
+          "mastery": 0.08,
+          "uses": 1,
+          "first_seen": "2026-02-21T01:54:12.599Z",
+          "last_used": "2026-02-21T01:54:12.599Z"
+        },
+        "ਚੰਗਾ ਮਾਲ": {
+          "meaning": "good goods",
+          "mastery": 0.08,
+          "uses": 1,
+          "first_seen": "2026-02-21T04:24:45.468Z",
+          "last_used": "2026-02-21T04:24:45.468Z"
+        },
+        "ਭਾਅ": {
+          "meaning": "price",
+          "mastery": 0.08,
+          "uses": 1,
+          "first_seen": "2026-02-21T04:24:45.468Z",
+          "last_used": "2026-02-21T04:24:45.468Z"
+        },
+        "ਬਾਰਗੈਨ ਕਰਨਾ": {
+          "meaning": "to bargain",
+          "mastery": 0.08,
+          "uses": 1,
+          "first_seen": "2026-02-21T04:24:45.468Z",
+          "last_used": "2026-02-21T04:24:45.468Z"
+        },
+        "ਬੈਗ": {
+          "meaning": "bag",
+          "mastery": 0.08,
+          "uses": 1,
+          "first_seen": "2026-02-21T04:24:45.468Z",
+          "last_used": "2026-02-21T04:24:45.469Z"
+        },
+        "ਨਕਦ": {
+          "meaning": "cash",
+          "mastery": 0.08,
+          "uses": 1,
+          "first_seen": "2026-02-21T04:24:45.469Z",
+          "last_used": "2026-02-21T04:24:45.469Z"
+        }
+      }
+    }
+  },
+  "last_updated": "2026-02-21T04:25:21.472Z"
+}
