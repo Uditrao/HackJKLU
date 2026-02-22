@@ -7,13 +7,17 @@ import { recordHit } from '@/lib/streakTracker';
 
 // ─── Constants ────────────────────────────────────────────────────────────────
 const NVIDIA_API_URL = 'https://integrate.api.nvidia.com/v1/chat/completions';
-const NVIDIA_API_KEY = process.env.NVIDIA_API_KEY || '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';
+const NVIDIA_API_KEY = process.env.NVIDIA_API_KEY
 const MODEL = 'qwen/qwen3-next-80b-a3b-instruct'; // Faster text-only model
 const FLUENCY_MARKER = '|||FLUENCY_DATA|||';
 const MAX_HISTORY_TURNS = 20; // cap context window for speed
 
 // ─── System Prompt Builder ────────────────────────────────────────────────────
 function buildSystemPrompt(language, ragContext) {
+  if(!NVIDIA_API_KEY){
+    console.log("Please insert an api key in .env folder");
+    return ;
+  }
   let prompt = `You are an expert, warm, and adaptive multilingual language tutor. You help users practice and learn ${language} through natural conversation.
 
 CORE RULES:

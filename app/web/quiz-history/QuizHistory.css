@@ -1,0 +1,351 @@
+/* ─────────────────────────────────────────────
+   QUIZ HISTORY PAGE — QuizHistory.css
+   Uses Dashboard.css base (sidebar / .main)
+───────────────────────────────────────────── */
+
+/* Inner scroll wrapper — proper padding without fighting .main gap */
+.qh-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 48px;
+}
+
+/* ── Header ────────────────────────────────── */
+.qh-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+.qh-eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #BBBBBB;
+    margin-bottom: 4px;
+}
+.qh-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #2E2E2E;
+    margin: 0 0 4px;
+    line-height: 1.2;
+}
+.qh-sub { font-size: 14px; color: #9E9E9E; margin: 0; }
+
+.qh-refresh-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 18px;
+    border: 1.5px solid #E8E8E8;
+    border-radius: 20px;
+    background: #fff;
+    color: #555;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: inherit;
+    transition: border-color 0.18s, color 0.18s;
+    white-space: nowrap;
+}
+.qh-refresh-btn:hover { border-color: #2D3A8C; color: #2D3A8C; }
+
+/* ── Stats row ─────────────────────────────── */
+.qh-stats-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+@media (max-width: 720px) { .qh-stats-row { grid-template-columns: repeat(2, 1fr); } }
+
+.qh-stat-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 18px 20px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+}
+.qh-stat-num  { font-size: 26px; font-weight: 700; color: #2D3A8C; line-height: 1; margin-bottom: 4px; }
+.qh-stat-label { font-size: 12px; color: #9E9E9E; font-weight: 500; }
+
+/* ── Filter pills ──────────────────────────── */
+.qh-filter-row { display: flex; gap: 8px; flex-wrap: wrap; }
+.qh-pill {
+    padding: 6px 16px;
+    border-radius: 20px;
+    border: 1.5px solid #E8E8E8;
+    background: #fff;
+    color: #777;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.18s;
+}
+.qh-pill:hover    { border-color: #2D3A8C; color: #2D3A8C; }
+.qh-pill.active   { background: #2D3A8C; border-color: #2D3A8C; color: #fff; }
+
+/* ── Loading ───────────────────────────────── */
+.qh-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 60px 0;
+    color: #9E9E9E;
+    font-size: 14px;
+}
+.qh-spinner {
+    width: 24px; height: 24px;
+    border: 3px solid #E8E8E8;
+    border-top-color: #2D3A8C;
+    border-radius: 50%;
+    animation: qh-spin 0.8s linear infinite;
+}
+@keyframes qh-spin { to { transform: rotate(360deg); } }
+
+/* ── Empty ─────────────────────────────────── */
+.qh-empty {
+    text-align: center;
+    padding: 64px 24px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+}
+.qh-empty-icon  { font-size: 48px; margin-bottom: 16px; }
+.qh-empty-title { font-size: 20px; font-weight: 700; color: #2E2E2E; margin-bottom: 8px; }
+.qh-empty-sub   { font-size: 14px; color: #9E9E9E; margin-bottom: 24px; }
+.qh-cta-btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #2D3A8C;
+    color: #fff;
+    border-radius: 14px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.18s;
+}
+.qh-cta-btn:hover { background: #4A5AB0; }
+
+/* ── Quiz card ─────────────────────────────── */
+.qh-quiz-card {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+    border: 1.5px solid transparent;
+    transition: border-color 0.18s, box-shadow 0.18s;
+    overflow: hidden; /* keeps rounded corners */
+}
+.qh-quiz-card:hover { border-color: #E3E6F5; box-shadow: 0 6px 24px rgba(45,58,140,0.1); }
+
+/* Card header */
+.qh-card-header {
+    display: flex;
+    align-items: center;
+    padding: 18px 22px;
+    cursor: pointer;
+    gap: 16px;
+    flex-wrap: wrap;
+    user-select: none;
+}
+.qh-card-header:hover { background: #FAFAFA; }
+
+/* Grade badge */
+.qh-grade-badge {
+    width: 52px; height: 52px;
+    border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+}
+
+/* Card info */
+.qh-card-info  { flex: 1; min-width: 0; }
+.qh-card-top   { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 4px; }
+.qh-score-big  { font-size: 20px; font-weight: 700; color: #2E2E2E; }
+.qh-correct-count { font-size: 12px; color: #9E9E9E; }
+.qh-lang-pill  { font-size: 10px; font-weight: 700; padding: 3px 10px; border-radius: 20px; background: #EEF0FA; color: #2D3A8C; }
+.qh-diff-pill  { font-size: 10px; font-weight: 600; padding: 3px 10px; border-radius: 20px; background: #F5F5F5; color: #777; text-transform: capitalize; }
+.qh-card-meta  { font-size: 11px; color: #9E9E9E; }
+.qh-xp-tag     { color: #E8B84A; font-weight: 600; }
+
+/* Score bar */
+.qh-score-bar-wrap { width: 80px; height: 5px; background: #F0F0F0; border-radius: 4px; overflow: hidden; flex-shrink: 0; }
+.qh-score-bar      { height: 100%; border-radius: 4px; transition: width 0.6s ease; }
+
+/* Mini stats */
+.qh-mini-stats { display: flex; flex-direction: column; gap: 4px; flex-shrink: 0; }
+.qh-mini-stat  { display: flex; align-items: center; gap: 8px; }
+.qh-mini-label { font-size: 12px; }
+.qh-mini-val   { font-size: 11px; font-weight: 700; color: #444; background: #F5F5F5; padding: 1px 7px; border-radius: 10px; }
+
+/* Chevron */
+.qh-chevron { color: #CCC; flex-shrink: 0; transition: transform 0.25s; }
+.qh-chevron.open { transform: rotate(180deg); }
+
+/* ── CSS Accordion breakdown ───────────────── */
+/* max-height transition — no JS measurement issues */
+.qh-breakdown {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.qh-breakdown.open {
+    /* large enough that any quiz fits */
+    max-height: 4000px;
+    transition: max-height 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.qh-breakdown-inner {
+    border-top: 1.5px solid #F3F3F3;
+    padding: 20px 22px 24px;
+}
+.qh-section-label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #BBBBBB;
+    margin-bottom: 14px;
+}
+
+/* ── Per-question row ──────────────────────── */
+.qh-q-row {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    padding: 14px 0;
+    border-bottom: 1px solid #F5F5F5;
+}
+.qh-q-row:last-of-type { border-bottom: none; margin-bottom: 16px; }
+
+.qh-q-circle {
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+.qh-q-body { flex: 1; min-width: 0; }
+
+.qh-q-meta {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-bottom: 6px;
+}
+.qh-q-type   { font-size: 11px; font-weight: 600; color: #555; }
+.qh-q-num    { font-size: 11px; color: #BBBBBB; }
+.qh-q-word   { font-size: 15px; font-weight: 700; color: #2D3A8C; }
+.qh-q-roman  { font-size: 11px; color: #9E9E9E; font-style: italic; }
+
+/* Speaking: prompt sentence */
+.qh-q-prompt {
+    font-size: 13px;
+    color: #555;
+    font-style: italic;
+    background: #F8F8FC;
+    border-left: 3px solid #C5CAE9;
+    padding: 6px 10px;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+/* MCQ option pills */
+.qh-options-row  { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+.qh-opt {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 500;
+    background: #F5F5F5;
+    color: #777;
+    border: 1.5px solid transparent;
+}
+.qh-opt-correct { background: rgba(90,206,138,0.12); border-color: #5ACE8A; color: #1E7A45; font-weight: 700; }
+.qh-opt-wrong   { background: rgba(229,115,115,0.12); border-color: #E57373; color: #A32B2B; font-weight: 700; }
+
+/* Answer rows */
+.qh-answer-row {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 4px;
+}
+.qh-ans-label { font-size: 11px; color: #9E9E9E; padding-top: 2px; flex-shrink: 0; }
+.qh-ans-val   { font-size: 13px; font-weight: 500; color: #333; }
+.ans-correct  { color: #1E7A45; }
+.ans-wrong    { color: #A32B2B; }
+.ans-partial  { color: #B37A00; }
+.ans-skipped  { color: #9E9E9E; font-style: italic; }
+
+/* Feedback */
+.qh-feedback {
+    font-size: 12px;
+    color: #555;
+    background: #F4F4FF;
+    border-left: 3px solid #9FA8DA;
+    padding: 8px 12px;
+    border-radius: 0 8px 8px 0;
+    margin-top: 6px;
+    line-height: 1.55;
+}
+
+/* Pronunciation tip */
+.qh-pron-tip {
+    font-size: 11px;
+    color: #888;
+    font-style: italic;
+    margin-top: 5px;
+    padding-left: 2px;
+    line-height: 1.5;
+}
+
+/* Question score */
+.qh-q-score {
+    font-size: 20px;
+    font-weight: 800;
+    flex-shrink: 0;
+    text-align: right;
+    min-width: 44px;
+    line-height: 1;
+    padding-top: 2px;
+}
+
+/* ── Summary bar ───────────────────────────── */
+.qh-summary-bar {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 18px;
+    border: 1.5px solid #EFEFEF;
+    border-radius: 16px;
+    overflow: hidden;
+}
+.qh-sum-item {
+    flex: 1;
+    min-width: 80px;
+    padding: 12px 16px;
+    border-right: 1.5px solid #EFEFEF;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+.qh-sum-item:last-child { border-right: none; }
+.qh-sum-item span   { font-size: 10px; color: #9E9E9E; text-transform: uppercase; font-weight: 600; letter-spacing: 0.5px; }
+.qh-sum-item strong { font-size: 15px; color: #2E2E2E; font-weight: 700; }
+
+/* Responsive */
+@media (max-width: 640px) {
+    .qh-card-header        { gap: 10px; }
+    .qh-mini-stats         { display: none; }
+    .qh-score-bar-wrap     { display: none; }
+    .qh-sum-item           { min-width: 60px; padding: 10px 12px; }
+    .qh-sum-item strong    { font-size: 13px; }
+}

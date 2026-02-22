@@ -11,7 +11,7 @@ const execAsync = promisify(exec);
 // ─── NVIDIA / DeepSeek client ─────────────────────────────────────────────────
 const client = new OpenAI({
   baseURL: 'https://integrate.api.nvidia.com/v1',
-  apiKey: process.env.NVIDIA_API_KEY || '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',
+  apiKey: process.env.NVIDIA_API_KEY ,
 });
 
 // ─── System Prompt ────────────────────────────────────────────────────────────
@@ -37,11 +37,15 @@ async function callLLM(outline, language, retries = 3) {
   for (let attempt = 1; attempt <= retries; attempt++) {
     console.log(`[generate] LLM attempt ${attempt}/${retries}`);
     try {
+    if(!process.env.NVIDIA_API_KEY){
+    console.log("Please insert an api key in .env folder");
+    return ;
+    }
       const response = await fetch('https://integrate.api.nvidia.com/v1/chat/completions', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Authorization': `Bearer ${process.env.NVIDIA_API_KEY || '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'}`
+          'Authorization': `Bearer ${process.env.NVIDIA_API_KEY}`
         },
         body: JSON.stringify({
           model: 'qwen/qwen3-next-80b-a3b-instruct',

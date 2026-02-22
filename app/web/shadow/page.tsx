@@ -78,7 +78,23 @@ export default function ShadowModePage() {
 
     // ── Page State
     const [pageState, setPageState] = useState<PageState>("entry");
-    const [activeTab, setActiveTab] = useState<"flashcards" | "quiz">("flashcards");
+    const [activeTab, setActiveTab] = useState<"flashcards" | "quiz" | "analyse">("flashcards");
+
+    // ── Quiz history for Analyse tab
+    const [quizHistory, setQuizHistory] = useState<any[]>([]);
+    const [historyLoading, setHistoryLoading] = useState(false);
+    const [expandedQuiz, setExpandedQuiz] = useState<string | null>(null);
+
+    const fetchHistory = useCallback(async () => {
+        setHistoryLoading(true);
+        try {
+            const res = await fetch("/api/quiz/history");
+            const data = await res.json();
+            setQuizHistory(data.quizzes || []);
+        } catch { /* ignore */ } finally {
+            setHistoryLoading(false);
+        }
+    }, []);
 
     // ── Real flashcards from API
     const [flashcards, setFlashcards] = useState<Flashcard[]>([]);
@@ -345,6 +361,12 @@ export default function ShadowModePage() {
                                 onClick={() => { setActiveTab("quiz"); setQuizScreen("setup"); }}
                             >
                                 Quiz
+                            </button>
+                            <button
+                                className={`sm-tab ${activeTab === "analyse" ? "active" : ""}`}
+                                onClick={() => { setActiveTab("analyse"); fetchHistory(); }}
+                            >
+                                Analyse
                             </button>
                         </div>
                         <div className="sm-context-line">Punjabi · Adult Stage · Daily Basics</div>
@@ -717,7 +739,153 @@ export default function ShadowModePage() {
                                 )}
                             </AnimatePresence>
 
+                            {/* ════════ ANALYSE TAB ════════ */}
+                            <AnimatePresence mode="wait">
+                                {activeTab === "analyse" && (
+                                    <motion.div
+                                        key="analyse-tab"
+                                        initial={{ opacity: 0, y: 16 }}
+                                        animate={{ opacity: 1, y: 0 }}
+                                        exit={{ opacity: 0 }}
+                                        transition={{ duration: 0.35 }}
+                                        style={{ display: "flex", flexDirection: "column", alignItems: "center", width: "100%", gap: "16px" }}
+                                    >
+                                        <div style={{ width: "100%", maxWidth: "520px" }}>
+                                            {/* Header */}
+                                            <div style={{ marginBottom: "20px", textAlign: "center" }}>
+                                                <div style={{ fontSize: "22px", fontWeight: 600, color: "var(--sm-text-primary)", marginBottom: "4px" }}>Quiz Analysis</div>
+                                                <div style={{ fontSize: "12px", color: "var(--sm-text-muted)" }}>A review of all your quizzes</div>
+                                            </div>
+
+                                            {/* Loading */}
+                                            {historyLoading && (
+                                                <div style={{ textAlign: "center", padding: "40px 0" }}>
+                                                    <div style={{ width: "28px", height: "28px", border: "3px solid var(--sm-surface)", borderTopColor: "var(--sm-accent)", borderRadius: "50%", animation: "sm-spin 0.8s linear infinite", margin: "0 auto 12px" }} />
+                                                    <div style={{ fontSize: "12px", color: "var(--sm-text-muted)" }}>Loading quiz history…</div>
+                                                </div>
+                                            )}
+
+                                            {/* Empty state */}
+                                            {!historyLoading && quizHistory.length === 0 && (
+                                                <div style={{ textAlign: "center", padding: "48px 24px", background: "var(--sm-surface)", borderRadius: "20px" }}>
+                                                    <div style={{ fontSize: "36px", marginBottom: "12px" }}>📊</div>
+                                                    <div style={{ fontSize: "15px", fontWeight: 600, color: "var(--sm-text-primary)", marginBottom: "6px" }}>No quizzes yet</div>
+                                                    <div style={{ fontSize: "13px", color: "var(--sm-text-muted)" }}>Complete your first quiz to see your analytics here.</div>
+                                                    <button
+                                                        style={{ marginTop: "20px", background: "var(--sm-accent)", color: "#fff", border: "none", borderRadius: "12px", padding: "10px 24px", fontSize: "13px", fontWeight: 600, cursor: "pointer", fontFamily: "inherit" }}
+                                                        onClick={() => { setActiveTab("quiz"); setQuizScreen("setup"); }}
+                                                    >
+                                                        Take a Quiz →
+                                                    </button>
+                                                </div>
+                                            )}
+
+                                            {/* Quiz history cards */}
+                                            {!historyLoading && quizHistory.map((quiz: any, i: number) => {
+                                                // Flat API response — fields are directly on quiz object
+                                                const qResults: any[] = quiz.question_results || [];
+                                                const score: number = quiz.total_score ?? 0;
+                                                const correct: number = quiz.correct_count ?? 0;
+                                                const total: number = quiz.total_questions ?? 0;
+                                                const xpEarned: number = quiz.xp_earned ?? 0;
+                                                // Compute grade from score
+                                                const grade = score >= 90 ? "A+" : score >= 80 ? "A" : score >= 70 ? "B" : score >= 60 ? "C" : score >= 40 ? "D" : "F";
+                                                const gradeCol = GRADE_COLOR[grade] || "#9E9E9E";
+                                                const isExpanded = expandedQuiz === quiz.quizId;
+                                                const date = quiz.created_at
+                                                    ? new Date(quiz.created_at).toLocaleDateString("en-IN", { day: "numeric", month: "short", year: "numeric", hour: "2-digit", minute: "2-digit" })
+                                                    : `Quiz ${quizHistory.length - i}`;
+
+
+                                                return (
+                                                    <div key={quiz.quizId || i} style={{ background: "var(--sm-surface)", borderRadius: "18px", marginBottom: "12px", overflow: "hidden", boxShadow: "0 4px 24px rgba(0,0,0,0.2)" }}>
+                                                        {/* Card header — click to expand */}
+                                                        <div
+                                                            onClick={() => setExpandedQuiz(isExpanded ? null : quiz.quizId)}
+                                                            style={{ display: "flex", alignItems: "center", padding: "18px 20px", cursor: "pointer", gap: "14px" }}
+                                                        >
+                                                            {/* Grade badge */}
+                                                            <div style={{ width: "44px", height: "44px", borderRadius: "12px", background: `${gradeCol}22`, border: `1.5px solid ${gradeCol}55`, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                                                                <span style={{ fontSize: "16px", fontWeight: 700, color: gradeCol }}>{grade}</span>
+                                                            </div>
+
+                                                            {/* Middle info */}
+                                                            <div style={{ flex: 1, minWidth: 0 }}>
+                                                                <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "3px" }}>
+                                                                    <span style={{ fontSize: "14px", fontWeight: 600, color: "var(--sm-text-primary)" }}>{score}%</span>
+                                                                    <span style={{ fontSize: "11px", color: "var(--sm-text-muted)" }}>· {correct}/{total} correct</span>
+                                                                    {quiz.language && <span style={{ fontSize: "10px", background: "var(--sm-accent-dim)", color: "var(--sm-accent)", padding: "2px 8px", borderRadius: "20px", fontWeight: 600 }}>{quiz.language}</span>}
+                                                                </div>
+                                                                <div style={{ fontSize: "11px", color: "var(--sm-text-muted)" }}>{date}{xpEarned ? ` · +${xpEarned} XP` : ""}</div>
+                                                            </div>
+
+                                                            {/* Score bar */}
+                                                            <div style={{ width: "60px", height: "4px", background: "rgba(255,255,255,0.1)", borderRadius: "4px", overflow: "hidden", flexShrink: 0 }}>
+                                                                <div style={{ height: "100%", width: `${score}%`, background: gradeCol, borderRadius: "4px", transition: "width 0.5s ease" }} />
+                                                            </div>
+
+                                                            {/* Chevron */}
+                                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ color: "var(--sm-text-muted)", flexShrink: 0, transform: isExpanded ? "rotate(180deg)" : "rotate(0deg)", transition: "transform 0.25s" }}>
+                                                                <polyline points="6 9 12 15 18 9" />
+                                                            </svg>
+                                                        </div>
+
+                                                        {/* Expanded per-question breakdown */}
+                                                        {isExpanded && qResults.length > 0 && (
+                                                            <div style={{ borderTop: "1px solid rgba(255,255,255,0.07)", padding: "14px 20px 18px" }}>
+                                                                <div style={{ fontSize: "10px", fontWeight: 700, color: "var(--sm-text-muted)", textTransform: "uppercase", letterSpacing: "0.8px", marginBottom: "10px" }}>Per-Question Results</div>
+                                                                {qResults.map((r: any, qi: number) => (
+                                                                    <div key={qi} style={{ display: "flex", gap: "10px", alignItems: "flex-start", marginBottom: "10px" }}>
+                                                                        {/* Pass/Fail dot */}
+                                                                        <div style={{ width: "20px", height: "20px", borderRadius: "50%", background: r.correct ? "rgba(90,206,138,0.15)" : "rgba(229,115,115,0.15)", border: `1.5px solid ${r.correct ? "#5ACE8A" : "#E57373"}`, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, marginTop: "1px" }}>
+                                                                            <span style={{ fontSize: "9px", color: r.correct ? "#5ACE8A" : "#E57373" }}>{r.correct ? "✓" : "✗"}</span>
+                                                                        </div>
+                                                                        <div style={{ flex: 1, minWidth: 0 }}>
+                                                                            <div style={{ display: "flex", alignItems: "center", gap: "6px", marginBottom: "2px" }}>
+                                                                                <span style={{ fontSize: "12px", color: "var(--sm-text-primary)", fontWeight: 500 }}>
+                                                                                    {r.type === "listening_mcq" ? "🎧" : "🎤"} Q{qi + 1}
+                                                                                    {r.word && <span style={{ color: "var(--sm-accent)", marginLeft: "4px" }}>{r.word}</span>}
+                                                                                </span>
+                                                                                <span style={{ fontSize: "10px", color: r.correct ? "#5ACE8A" : "#E57373", fontWeight: 600 }}>{r.score}pts</span>
+                                                                            </div>
+                                                                            <div style={{ fontSize: "11px", color: "var(--sm-text-muted)", lineHeight: 1.4 }}>
+                                                                                You: <em style={{ color: "var(--sm-text-secondary)" }}>{r.user_answer || "(skipped)"}</em>
+                                                                                {!r.correct && r.correct_answer && <span> · <span style={{ color: "#5ACE8A" }}>✓ {r.correct_answer}</span></span>}
+                                                                            </div>
+                                                                            {r.feedback && <div style={{ fontSize: "10px", color: "var(--sm-text-muted)", marginTop: "2px", lineHeight: 1.4, fontStyle: "italic" }}>{r.feedback}</div>}
+                                                                        </div>
+                                                                    </div>
+                                                                ))}
+                                                                {/* Summary footer */}
+                                                                <div style={{ marginTop: "12px", padding: "10px 14px", background: "rgba(255,255,255,0.04)", borderRadius: "10px", display: "flex", gap: "16px", flexWrap: "wrap" }}>
+                                                                    <span style={{ fontSize: "11px", color: "var(--sm-text-muted)" }}>Score: <strong style={{ color: gradeCol }}>{score}%</strong></span>
+                                                                    <span style={{ fontSize: "11px", color: "var(--sm-text-muted)" }}>Correct: <strong style={{ color: "var(--sm-text-secondary)" }}>{correct}/{total}</strong></span>
+                                                                    {xpEarned > 0 && <span style={{ fontSize: "11px", color: "var(--sm-text-muted)" }}>XP: <strong style={{ color: "var(--sm-accent)" }}>+{xpEarned}</strong></span>}
+                                                                </div>
+                                                            </div>
+                                                        )}
+                                                    </div>
+                                                );
+                                            })}
+
+                                            {/* Refresh button */}
+                                            {!historyLoading && quizHistory.length > 0 && (
+                                                <button
+                                                    onClick={fetchHistory}
+                                                    style={{ display: "block", margin: "4px auto 0", background: "none", border: "1.5px solid var(--sm-text-muted)", color: "var(--sm-text-muted)", borderRadius: "20px", padding: "8px 20px", fontSize: "12px", cursor: "pointer", fontFamily: "inherit", transition: "color 0.2s, border-color 0.2s" }}
+                                                    onMouseEnter={e => { e.currentTarget.style.color = "var(--sm-accent)"; e.currentTarget.style.borderColor = "var(--sm-accent)"; }}
+                                                    onMouseLeave={e => { e.currentTarget.style.color = "var(--sm-text-muted)"; e.currentTarget.style.borderColor = "var(--sm-text-muted)"; }}
+                                                >
+                                                    ↻ Refresh
+                                                </button>
+                                            )}
+                                        </div>
+                                    </motion.div>
+                                )}
+                            </AnimatePresence>
+
                         </div>
+
                     </motion.div>
                 )}
             </AnimatePresence>

@@ -62,6 +62,22 @@ type DashboardData = {
 export default function DashboardPage() {
     const [data, setData] = useState<DashboardData | null>(null);
     const [isLoading, setIsLoading] = useState(true);
+    const [showResetModal, setShowResetModal] = useState(false);
+    const [resetting, setResetting] = useState(false);
+
+    const handleReset = async () => {
+        setResetting(true);
+        try {
+            const res = await fetch('/api/reset', { method: 'POST' });
+            const json = await res.json();
+            if (json.success) {
+                setShowResetModal(false);
+                window.location.reload();
+            }
+        } catch { /* ignore */ } finally {
+            setResetting(false);
+        }
+    };
 
     useEffect(() => {
         const fetchAll = async () => {
@@ -168,6 +184,13 @@ export default function DashboardPage() {
                         Shadow Mode
                     </Link>
 
+                    <Link href="/web/quiz-history" className="nav-item">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M9 11l3 3L22 4" /><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
+                        </svg>
+                        Quiz History
+                    </Link>
+
                     <div className="nav-divider"></div>
                 </nav>
 
@@ -178,6 +201,36 @@ export default function DashboardPage() {
                         <div className="profile-label">Level {xp?.level} · {xp?.difficulty}</div>
                     </div>
                 </div>
+
+                {/* Reset button */}
+                <button
+                    onClick={() => setShowResetModal(true)}
+                    style={{
+                        marginTop: '12px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '8px',
+                        width: '100%',
+                        padding: '10px 14px',
+                        borderRadius: '12px',
+                        border: '1.5px solid #FDDEDE',
+                        background: '#FFF5F5',
+                        color: '#C0392B',
+                        fontSize: '13px',
+                        fontWeight: 500,
+                        cursor: 'pointer',
+                        transition: 'background 0.18s',
+                        fontFamily: 'inherit',
+                    }}
+                    onMouseEnter={e => (e.currentTarget.style.background = '#FDDEDE')}
+                    onMouseLeave={e => (e.currentTarget.style.background = '#FFF5F5')}
+                >
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <polyline points="1 4 1 10 7 10" />
+                        <path d="M3.51 15a9 9 0 1 0 .49-3.75" />
+                    </svg>
+                    Reset Progress
+                </button>
             </aside>
 
             {/* ── MAIN CONTENT ── */}
@@ -379,6 +432,56 @@ export default function DashboardPage() {
                     </Link>
                 </div>
             </main>
+            {/* ── RESET CONFIRMATION MODAL ── */}
+            {showResetModal && (
+                <div style={{
+                    position: 'fixed', inset: 0, zIndex: 1000,
+                    background: 'rgba(0,0,0,0.45)',
+                    display: 'flex', alignItems: 'center', justifyContent: 'center',
+                }} onClick={() => setShowResetModal(false)}>
+                    <div style={{
+                        background: '#FFFFFF',
+                        borderRadius: '20px',
+                        padding: '36px 32px',
+                        width: '100%', maxWidth: '400px',
+                        boxShadow: '0 24px 80px rgba(0,0,0,0.18)',
+                        fontFamily: 'DM Sans, sans-serif',
+                    }} onClick={e => e.stopPropagation()}>
+                        <div style={{ fontSize: '32px', textAlign: 'center', marginBottom: '12px' }}>⚠️</div>
+                        <div style={{ fontSize: '20px', fontWeight: 700, color: '#2E2E2E', textAlign: 'center', marginBottom: '8px' }}>Reset All Progress?</div>
+                        <div style={{ fontSize: '14px', color: '#9E9E9E', textAlign: 'center', lineHeight: 1.6, marginBottom: '28px' }}>
+                            This will permanently erase your XP, words, chat history, quiz results, and streaks. You&apos;ll start fresh as a beginner.
+                        </div>
+                        <div style={{ display: 'flex', gap: '12px' }}>
+                            <button
+                                onClick={() => setShowResetModal(false)}
+                                style={{
+                                    flex: 1, padding: '12px', border: '1.5px solid #E8E8E8',
+                                    borderRadius: '12px', background: '#F3F2EC',
+                                    color: '#2E2E2E', fontSize: '14px', fontWeight: 600,
+                                    cursor: 'pointer', fontFamily: 'inherit',
+                                }}
+                            >
+                                Cancel
+                            </button>
+                            <button
+                                onClick={handleReset}
+                                disabled={resetting}
+                                style={{
+                                    flex: 1, padding: '12px', border: 'none',
+                                    borderRadius: '12px', background: resetting ? '#E57373' : '#C0392B',
+                                    color: '#FFFFFF', fontSize: '14px', fontWeight: 600,
+                                    cursor: resetting ? 'not-allowed' : 'pointer',
+                                    fontFamily: 'inherit', opacity: resetting ? 0.7 : 1,
+                                    transition: 'background 0.2s',
+                                }}
+                            >
+                                {resetting ? 'Resetting…' : 'Yes, Reset Everything'}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }

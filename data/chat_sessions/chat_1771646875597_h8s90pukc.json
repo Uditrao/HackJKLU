@@ -1,23 +1,0 @@
-{
-  "id": "chat_1771646875597_h8s90pukc",
-  "language": "Punjabi",
-  "created_at": "2026-02-21T04:07:55.597Z",
-  "updated_at": "2026-02-21T04:07:57.643Z",
-  "fluency_scores": [],
-  "avg_fluency": 0,
-  "topics_covered": [],
-  "vocabulary_used": [],
-  "messages": [
-    {
-      "role": "user",
-      "content": "hi",
-      "timestamp": "2026-02-21T04:07:57.640Z",
-      "fluency": 0
-    },
-    {
-      "role": "assistant",
-      "content": "ਸਤ ਸ੍ਰੀ ਅਕਾਲ! 😊 ਤੁਸੀਂ ਅੱਜ ਕੀ ਕਰ ਰਹੇ ਹੋ?  \n(Hello! 😊 What are you up to today?)\n\n**ਕਰ** (kar) = to do  \n**ਅੱਜ** (aaj) = today  \n**ਕੀ** (kī) = what",
-      "timestamp": "2026-02-21T04:07:57.642Z"
-    }
-  ]
-}
