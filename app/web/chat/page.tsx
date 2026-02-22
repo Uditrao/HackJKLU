@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef, useCallback, Suspense } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
@@ -32,7 +32,7 @@ type Session = {
     messages?: any[];
 };
 
-export default function ChatPage() {
+function ChatPageInner() {
     const router = useRouter();
     const searchParams = useSearchParams();
 
@@ -511,3 +511,12 @@ export default function ChatPage() {
         </div>
     );
 }
+
+export default function ChatPage() {
+    return (
+        <Suspense fallback={<div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100vh', fontFamily: 'DM Sans, sans-serif', color: '#9E9E9E' }}>Loading…</div>}>
+            <ChatPageInner />
+        </Suspense>
+    );
+}
+

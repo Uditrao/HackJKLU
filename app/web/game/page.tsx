@@ -22,7 +22,7 @@ const ResetModal = ({ onClose, onConfirm, resetting }: { onClose: () => void; on
     </div>
 );
 
-const ResetButton = ({ onClick }: { onClick: () => void }) => (
+const ResetButton = ({ onClick }: { onClick: () => void}) => (
     <button
         onClick={onClick}
         style={{ marginTop: '12px', display: 'flex', alignItems: 'center', gap: '8px', width: '100%', padding: '10px 14px', borderRadius: '12px', border: '1.5px solid #FDDEDE', background: '#FFF5F5', color: '#C0392B', fontSize: '13px', fontWeight: 500, cursor: 'pointer', transition: 'background 0.18s', fontFamily: 'inherit' }}
@@ -36,7 +36,7 @@ const ResetButton = ({ onClick }: { onClick: () => void }) => (
     </button>
 );
 
-export default function GamePage(): JSX.Element {
+export default function GamePage() {
     const [showReset, setShowReset] = useState(false);
     const [resetting, setResetting] = useState(false);
 

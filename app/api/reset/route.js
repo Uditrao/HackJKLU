@@ -9,7 +9,8 @@ const DEFAULTS = {
   'memory.json': { xp: 0, level: 1, difficulty: 'beginner', words_learned: {} },
   'conversations.json': [],
   'words.json': [],
-  'chat_knowledge.json': { facts: [], vocabulary: [], topics: [] },
+  // Must match DEFAULT_KNOWLEDGE in lib/chatMemory.js
+  'chat_knowledge.json': { languages: {}, last_updated: null },
   'daily_streak.json': { streak: 0, last_date: null, history: [] },
 };
 
